@@ -20,12 +20,12 @@ import {
 import default_image from './assets/default_profile_image.jpg'
 
 function Profile() {
-    const [userProfile] = useState(null) // Set userProfile state directly
+    const [userProfile] = useState(null)
 
     const { isOpen, onClose } = useDisclosure()
 
     return (
-        <VStack spacing={3} py={5} borderBottomWidth={1} borderColor="brand.light">
+        <VStack spacing={3} py={5} borderBottomWidth={1} borderColor="brand.light" align="center">
             <Avatar
                 size="2xl"
                 name="Vladimir Nabokov"
@@ -64,16 +64,22 @@ function Profile() {
                     </ModalFooter>
                 </ModalContent>
             </Modal>
-            <VStack spacing={1}>
+            <VStack spacing={1} align="center">
                 <Heading as="h3" fontSize="xl" color="brand.dark">
-                    Vladimir Nabokov
+                    Name: Vladimir Nabokov
                 </Heading>
-                <Text color="brand.gray" fontSize="sm">
-                    Student
-                </Text>
+                <Heading as="h3" fontSize="xl" color="brand.dark">
+                    Role: Student
+                </Heading>
+                <Heading as="h3" fontSize="xl" color="brand.dark">
+                    Email: user_email@gmail.com
+                </Heading>
+                <Heading as="h3" fontSize="xl" color="brand.dark">
+                    School: Hunter College High School
+                </Heading>
             </VStack>
         </VStack>
     )
 }
 
-export default Profile
+export default Profile;
