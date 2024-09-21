@@ -29,6 +29,7 @@ We have built a web app that allows students to complete their necessary enrollm
 ## Tools:
 
 Frontend: HTML, CSS, JavaScript, React, Vite, Material-UI
+
 Backend: Node.js, Firebase, AG Grit (CSV reports), Chart.js
 
 ## Accessibility: 
