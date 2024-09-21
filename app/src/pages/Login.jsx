@@ -60,6 +60,9 @@ export default function Login() {
         } else if (role === "Student") {
           navigate("/student");
         }
+        else if (role === "Tutor") {
+          navigate("/tutor");
+        }
       } else {
         // Sign in the user
         const userCredential = await signInWithEmailAndPassword(
