@@ -7,7 +7,7 @@ function Module({ name, url }) {
       <h1 id="Class">Class {name}</h1>
       <ul>
         
-        <li><h3><a href={url} target="_blank" rel="noopener noreferrer">Start Class</a></h3></li>
+        <h3><a href={url} target="_blank" rel="noopener noreferrer">Start Class</a></h3>
 
       </ul>
     </div>
