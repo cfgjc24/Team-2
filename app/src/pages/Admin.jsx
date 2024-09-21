@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import {PreConfidenceChart} from '../charts/PreConfidenceChart'
+import PreConfidenceChart from '../components/PreConfidenceChart'
 // import PostConfidenceChart from '../charts/Post-ConfidenceChart'
 
 function Admin() {

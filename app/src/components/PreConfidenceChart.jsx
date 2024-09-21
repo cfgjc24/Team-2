@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Bar } from 'react-chartjs-2'
+import 'chart.js/auto'
 
 let PreConfidenceChart = () => {
 
