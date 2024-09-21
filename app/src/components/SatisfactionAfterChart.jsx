@@ -108,7 +108,7 @@ const SatisfactionAfterChart = () => {
   };
 
   return (
-    <div style={{ width: "50%", height: "80%" }}>
+    <div>
       {loading ? (
         <p>Loading data...</p>
       ) : chartData ? (
