@@ -14,20 +14,20 @@ export default function Login() {
   return (
     <div class = "login">
       <form>
-  <div class = "username">
-    <FormLabel>Username: </FormLabel>
+  <div class = "form-group">
+    <FormLabel class = "label">Username: </FormLabel>
     <TextField />
   </div>
-  <div class = "password">
-    <FormLabel>Password: </FormLabel>
+  <div class = "form-group">
+    <FormLabel class = "label">Password: </FormLabel>
     <TextField />
   </div>
-  <div class = "password">
-    <FormLabel>Role: </FormLabel>
+  <div class = "form-group">
+    <FormLabel class = "label">Role: </FormLabel>
     <TextField />
   </div>
-  <div class = "password">
-    <FormLabel>School: </FormLabel>
+  <div class = "form-group">
+    <FormLabel class = "label">School: </FormLabel>
     <TextField />
   </div>
 </form>
