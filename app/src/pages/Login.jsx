@@ -12,7 +12,7 @@ import RoleDropDown from "../components/RoleDropdown";
 import SchoolDropDown from "../components/SchoolDropdown";
 import { collection, query, where, getDocs } from "firebase/firestore"; // Import necessary Firestore methods
 import logo from "../assets/firstgenerationinvestors_logo.jpeg";
-import Navbar from "../components/navbar";
+//import Navbar from "../components/navbar";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -117,7 +117,7 @@ export default function Login() {
         height: "100vh",
       }}
     >
-      <Navbar></Navbar>
+      
       <header
         className="landing-header"
         style={{ width: "100%", textAlign: "center", marginTop: "20px" }}
