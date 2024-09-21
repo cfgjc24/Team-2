@@ -1,8 +1,15 @@
 import React from 'react'
 import '../index.css'
+import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Home() {
+  const navigate = useNavigate();  // Initialize the navigate function
+
+  const handleLoginClick = () => {
+    navigate('/login');  // Navigate to the /login route
+  };
   return (
     <div>
 
@@ -36,7 +43,9 @@ export default function Home() {
                   </li>
                 </ul>
               </li>
-              <li><a href="http://127.0.0.1:5173/login" class="button primary">Login</a></li>
+              <li>
+                <Button class="button primary" onClick={handleLoginClick}>Login</Button>
+              </li>
             </ul>
           </nav>
         </header>
@@ -57,7 +66,7 @@ export default function Home() {
             </header>
             <h3>Mission:</h3>
             <p>First Generation Investors (FGI) teaches high school students the power of investing and brings
-classroom lessons to life by providing students with real money to invest.</p>
+              classroom lessons to life by providing students with real money to invest.</p>
             <footer>
               <ul class="buttons stacked">
                 <li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
@@ -80,8 +89,8 @@ classroom lessons to life by providing students with real money to invest.</p>
             <span class="icon solid fa-chart-bar"></span>
             <h2>Who are we?</h2>
             <p>FGI believes that financial education is key to unlocking a brighter future. Many high school students
-may not have access to the resources they need to learn about investing and FGI is doing the work to
-bridge the gap.</p>
+              may not have access to the resources they need to learn about investing and FGI is doing the work to
+              bridge the gap.</p>
           </header>
 
 
@@ -183,14 +192,14 @@ bridge the gap.</p>
               <div class="col-6 col-12-narrower">
 
 
-                
+
 
 
               </div>
               <div class="col-6 col-12-narrower">
 
 
-                
+
 
 
               </div>
@@ -211,7 +220,7 @@ bridge the gap.</p>
             </div>
 
 
-           
+
 
 
           </section>
@@ -241,7 +250,7 @@ bridge the gap.</p>
 
 
 
-        
+
 
 
       </div>
