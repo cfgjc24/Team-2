@@ -4,7 +4,7 @@ import 'chart.js/auto';
 import { firestore } from '../Firebase.js'; 
 import { collection, getDocs } from 'firebase/firestore';
 
-const PreConfidenceChart = () => {
+const SatisfactionAfterChart = () => {
   const [chartData, setChartData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -17,20 +17,20 @@ const PreConfidenceChart = () => {
         if (!querySnapshot.empty) {
           const dataFromFirebase = querySnapshot.docs.map(doc => doc.data());
 
-          const preConfidenceArray = Array(8).fill(0);
+          const satisfactionAfterArray = Array(8).fill(0);
           const moduleCount = {};
 
           // Iterate over Firestore data to accumulate sums and counts for each module
           dataFromFirebase.forEach(data => {
             const moduleIndex = data.lesson_num - 1; // Subtract 1 to make lesson_num zero-based
-            if (moduleIndex >= 0 && moduleIndex < preConfidenceArray.length) {
-              preConfidenceArray[moduleIndex] += data['confidence_before'];
+            if (moduleIndex >= 0 && moduleIndex < satisfactionAfterArray.length) {
+              satisfactionAfterArray[moduleIndex] += data['satisfaction_after'];
               moduleCount[moduleIndex] = (moduleCount[moduleIndex] || 0) + 1;
             }
           });
 
           // Compute the average confidence for each module
-          const averagedPreConfidenceArray = preConfidenceArray.map((sum, index) => {
+          const averagedSatisfactionAfterArray = satisfactionAfterArray.map((sum, index) => {
             const count = moduleCount[index] || 0;
             return count > 0 ? sum / count : 0;
           });
@@ -38,7 +38,7 @@ const PreConfidenceChart = () => {
           const chartData = {
             labels: ['Module 1', 'Module 2', 'Module 3', 'Module 4', 'Module 5', 'Module 6', 'Module 7', 'Capstone'],
             datasets: [{
-              data: averagedPreConfidenceArray,
+              data: averagedSatisfactionAfterArray,
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(255, 159, 64, 0.2)',
@@ -100,4 +100,4 @@ const PreConfidenceChart = () => {
   );
 };
 
-export default PreConfidenceChart;
+export default SatisfactionAfterChart;

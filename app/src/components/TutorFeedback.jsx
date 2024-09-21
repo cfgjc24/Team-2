@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 
 export default function TutorFeedback() {
   return (
-    <Card sx={{ minWidth: 600, minHeight: 300 }}>
+    <Card sx={{ minWidth: 550, minHeight: 300 }}>
       <CardContent>
         <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 30 }}>
           View Tutor Feedback
