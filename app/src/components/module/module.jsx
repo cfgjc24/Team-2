@@ -6,26 +6,27 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 
 
+function Module({ name, url, description }) {  // Receive description prop
 
-function Module({ name, url }) {
   const navigate = useNavigate(); // Initialize useNavigate
 
   // Function to navigate to Pre-Survey
   const handlePreSurveyClick = () => {
     navigate('/presurvey'); // Redirect to /presurvey when button is clicked
-  };
 
-  function sendModule(name) {
+
+  };  function sendModule(name) {
     StudentForm(name);
   }
+
   return (
     <>
       <div className="module">
         <h1 id="Module">Module {name}</h1>
         <h5 id="description">
-          Insert Description For Module
+          {description}  {/* Display the description */}
         </h5>
-        <ul>
+         <ul>
           <li>
             <Button onClick={handlePreSurveyClick}>Student Pre-Survey</Button>
           </li>
@@ -37,4 +38,4 @@ function Module({ name, url }) {
   )
 }
 
-export default Module
+export default Module;
