@@ -155,6 +155,7 @@ bridge the gap.</p>
                   <span class="icon solid featured fa-check"></span>
                   <header>
                     <h3>Admin Portal</h3>
+                    <p>The admin portal has access to confidence levels of students before and after modules. This shows the impacts of our course, and why our course prepares high schoolers all around the country for key financial concepts!</p>
                   </header>
                   <p></p>
                 </section>
@@ -170,7 +171,7 @@ bridge the gap.</p>
 
 
             <header class="major">
-              <h2>Next look at this <strong>cool stuff</strong></h2>
+              <h2>Our <strong>donors</strong></h2>
             </header>
 
 
