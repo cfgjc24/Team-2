@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { redirect, useNavigate, Navigate } from "react-router-dom"; // Import useNavigate
 import "../index.css";
 import RoleDropDown from '../components/RoleDropdown'
 import SchoolDropDown from '../components/SchoolDropdown'
@@ -17,6 +18,8 @@ export default function Login() {
   const [school, setSchool] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
   const [error, setError] = useState("");
+
+  const navigate = useNavigate(); // Initialize the navigate function
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,6 +52,10 @@ export default function Login() {
         }
 
         console.log("Sign up successful", user);
+
+        if (role === "Admin") {
+          navigate("/admin");
+        }
       } else {
         const userCredential = await signInWithEmailAndPassword(
           auth,
@@ -56,9 +63,13 @@ export default function Login() {
           password
         );
         console.log("Sign in successful", userCredential.user);
+
+        // If it's a sign in and role is admin, navigate to /admin
+        if (role === "Admin") {
+          navigate("/admin");
+        }
       }
       console.log("Authentication successful");
-      // Redirect or update state as needed after successful authentication
     } catch (error) {
       console.error("Authentication error:", error);
       setError(`${error.code}: ${error.message}`);
@@ -89,7 +100,6 @@ export default function Login() {
         {isSignUp && (
           <>
             <div className="form-group">
-
               <FormLabel className="label">Role: </FormLabel>
               <RoleDropDown setRole={setRole} />
             </div>
