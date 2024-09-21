@@ -2,12 +2,18 @@ import React, { useEffect, useState, useRef } from "react";
 import "@ag-grid-community/styles/ag-grid.css";
 import "@ag-grid-community/styles/ag-theme-quartz.css";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
+import { CsvExportModule } from "@ag-grid-community/csv-export";
+import { ExcelExportModule } from "@ag-grid-enterprise/excel-export"; // Import Excel Export module
 import { ModuleRegistry, Grid } from "@ag-grid-community/core";
 import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "./../Firebase";
 
-// Registering the necessary ag-Grid module
-ModuleRegistry.registerModules([ClientSideRowModelModule]);
+// Registering the necessary ag-Grid modules
+ModuleRegistry.registerModules([
+  ClientSideRowModelModule,
+  CsvExportModule,
+  ExcelExportModule,
+]); // Register Excel Export
 
 const columnDefs = [
   { field: "user_id", headerName: "User ID", width: 150 },
@@ -67,7 +73,7 @@ export default function StudentFeedbackTable() {
   }, [rowData]);
 
   // Export to CSV function
-  const handleExport = () => {
+  const handleExportCSV = () => {
     if (gridRef.current) {
       gridRef.current.gridOptions.api.exportDataAsCsv({
         fileName: "student_feedback.csv", // Specify the file name
@@ -77,14 +83,26 @@ export default function StudentFeedbackTable() {
     }
   };
 
+  // Export to Excel function
+  const handleExportExcel = () => {
+    if (gridRef.current) {
+      gridRef.current.gridOptions.api.exportDataAsExcel({
+        fileName: "student_feedback.xlsx", // Specify the Excel file name
+        sheetName: "Feedback Data", // Specify the sheet name
+      });
+    }
+  };
+
   return (
     <div>
-      <button onClick={handleExport}>Export to CSV</button>
+      <h1 style={{ fontWeight: "bold" }}>Student Feedback Report</h1>
       <div
         id="myGrid"
         style={{ height: "500px", width: "100%" }}
         className="ag-theme-quartz"
       ></div>
+      <button onClick={handleExportCSV}>Export to CSV</button>
+      <button onClick={handleExportExcel}>Export to Excel</button>
     </div>
   );
 }
