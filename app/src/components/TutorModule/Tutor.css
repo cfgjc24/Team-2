@@ -1,10 +1,14 @@
-html {
+.module {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  padding: 20px;
+  margin: 20px auto;
   text-align: center;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: vw;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .TutorClass {
   margin: 0 auto;
@@ -13,21 +17,6 @@ html {
 
   h1 {
     font-size: 3vw;
-  }
-
-  .grid {
-    display: grid;
-    padding: 1.5vw;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(3, 2fr);
-    /* Each column now takes up more space */
-    justify-content: center;
-    margin: auto;
-    column-gap: 1.5vw;
-    row-gap: 5vh;
-    width: 90%;
-    max-width: 100%;
-    grid-column: span 2;
   }
 
   #classStart {
