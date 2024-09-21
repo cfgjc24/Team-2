@@ -102,23 +102,21 @@ export default function Login() {
     <div className="login">
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <FormLabel className="label">Email: </FormLabel>
+          <FormLabel className="label">Password:</FormLabel>
           <TextField
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="email"
-            required
+            fullWidth
+            variant="outlined"
           />
         </div>
         <div className="form-group">
-          <FormLabel className="label">Password: </FormLabel>
+          <FormLabel className="label">Role:</FormLabel>
           <TextField
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-            required
+            
+            fullWidth
+            variant="outlined"
           />
         </div>
+
         {isSignUp && (
           <>
             <div className="form-group">
@@ -139,6 +137,7 @@ export default function Login() {
       <Button onClick={() => setIsSignUp(!isSignUp)}>
         {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
       </Button>
+
     </div>
   );
 }
