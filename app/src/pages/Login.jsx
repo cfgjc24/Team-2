@@ -8,7 +8,8 @@ import {
 import { doc, setDoc } from "firebase/firestore";
 import { redirect, useNavigate, Navigate } from "react-router-dom"; // Import useNavigate
 import "../index.css";
-import RoleDropDown from "../components/RoleDropdown";
+import RoleDropDown from '../components/RoleDropdown'
+import SchoolDropDown from '../components/SchoolDropdown'
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -104,11 +105,7 @@ export default function Login() {
             </div>
             <div className="form-group">
               <FormLabel className="label">School: </FormLabel>
-              <TextField
-                value={school}
-                onChange={(e) => setSchool(e.target.value)}
-                required
-              />
+              <SchoolDropDown setSchool={setSchool} />
             </div>
           </>
         )}
