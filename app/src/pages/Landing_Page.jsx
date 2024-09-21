@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from 'app/firstgenerationinvestors_logo.jpeg'
+import logo from '../assets/firstgenerationinvestors_logo.jpeg';
 
 //Landing page -- will contain view similar to current website iteration. Donate button. 
 export default function Landing_Page() {
