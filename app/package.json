@@ -11,13 +11,17 @@
     "start": "npm run start-server"
   },
   "dependencies": {
+    "@ag-grid-community/client-side-row-model": "^32.2.0",
     "@ag-grid-community/core": "^32.2.0",
+    "@ag-grid-community/csv-export": "^32.2.0",
     "@ag-grid-community/react": "^32.2.0",
     "@ag-grid-community/styles": "^32.2.0",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.1",
     "@mui/material": "^6.1.1",
+    "ag-grid-community": "^32.2.0",
+    "ag-grid-react": "^32.2.0",
     "firebase": "^10.13.2",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
