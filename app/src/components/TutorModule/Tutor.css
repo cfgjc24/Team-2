@@ -1,0 +1,44 @@
+.TutorClass {
+  padding: 30px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 40px; /* Increased space between grid items */
+  margin-top: 40px; /* Add some top margin */
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+/* Updated styles for the Module component */
+.module-card {
+  background-color: #2A92EF; /* Blue color */
+  width: 250px; /* Increase width */
+  height: 200px; /* Increase height */
+  padding: 1rem;
+  box-shadow: 2px 1vh 1vh 1px rgb(0 0 0 / 20%);
+  border-radius: 8px; /* Slightly less round corners */
+  color: white; /* Text color */
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text inside the module */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.module-card h3 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.2rem; /* Adjust font size as needed */
+}
+
+.module-card a {
+  color: white; /* Keep link color white */
+  text-decoration: none; /* Optional: remove underline */
+}
