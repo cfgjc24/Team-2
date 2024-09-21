@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     Avatar,
     AvatarBadge,
@@ -18,11 +18,34 @@ import {
     Badge,
 } from '@chakra-ui/react'
 import default_image from './assets/default_profile_image.jpg'
+import { getAuth } from "firebase/auth";
+
 
 function Profile() {
-    const [userProfile] = useState(null)
+    const [userProfile, setUserProfile] = useState(null)
 
     const { isOpen, onClose } = useDisclosure()
+
+
+    useEffect(() => {
+        const auth = getAuth()
+
+        const userProfileCaptured = auth.onAuthStateChanged((user) => {
+            if (user) {
+                setUserProfile({
+                    uid: user.uid,
+                    full_name: user.full_name,
+                    email: user.email,
+                    role: user.role,
+                    school_name: user.school_name
+                });
+            } else {
+                setUserProfile(null);
+            }
+        });
+
+        return () => userProfileCaptured();
+    }, []);
 
     return (
         <VStack spacing={3} py={5} borderBottomWidth={1} borderColor="brand.light" align="center">
@@ -30,7 +53,7 @@ function Profile() {
                 size="2xl"
                 name="Vladimir Nabokov"
                 cursor="default"
-                src={userProfile ? userProfile : default_image}
+                src={default_image}
             >
                 <AvatarBadge bg="brand.blue" boxSize="1em">
                     <svg width="0.4em" fill="currentColor" viewBox="0 0 20 20">
@@ -66,16 +89,16 @@ function Profile() {
             </Modal>
             <VStack spacing={1} align="center">
                 <Heading as="h3" fontSize="xl" color="brand.dark">
-                    Name: Vladimir Nabokov
+                    Name: {userProfile?.full_name}
                 </Heading>
                 <Heading as="h3" fontSize="xl" color="brand.dark">
-                    Role: Student
+                    Email: {userProfile?.email}
                 </Heading>
                 <Heading as="h3" fontSize="xl" color="brand.dark">
-                    Email: user_email@gmail.com
+                    Role: {userProfile?.role}
                 </Heading>
                 <Heading as="h3" fontSize="xl" color="brand.dark">
-                    School: Hunter College High School
+                    School: {userProfile?.school_name}
                 </Heading>
             </VStack>
         </VStack>
