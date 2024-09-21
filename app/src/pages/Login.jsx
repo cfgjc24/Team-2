@@ -105,61 +105,57 @@ export default function Login() {
   };
 
   return (
-    <div className="landing-container">
-    <header className="landing-header">
-                <nav className="landing-nav">
-                    <div className="logo">
-                        <img src={logo} alt="First Generation Investors Logo" />
-                    </div>
-                    <ul className="nav-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
+    <div className="landing-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', height: '100vh' }}>
+      <header className="landing-header" style={{ width: '100%', textAlign: 'center', marginTop: '20px' }}>
+        <nav className="landing-nav">
+          <div className="logo" style={{ marginBottom: '20px' }}>
+            <img src={logo} alt="First Generation Investors Logo" style={{ maxWidth: '150px' }} />
+          </div>
+        </nav>
+      </header>
 
-    <div className="login">
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
+      <div className="login" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', width: '100%', maxWidth: '400px', marginTop: '40px' }}>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group" style={{ marginBottom: '15px' }}>
           <FormLabel className="label">Email: </FormLabel>
-          <TextField
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="email"
-            required
-          />
-        </div>
-        <div className="form-group">
+            <TextField
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              required
+            />
+          </div>
+          <div className="form-group" style={{ marginBottom: '15px' }}>
           <FormLabel className="label">Password: </FormLabel>
-          <TextField
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-            required
-          />
-        </div>
-        {isSignUp && (
-          <>
-            <div className="form-group">
-              <FormLabel className="label">Role: </FormLabel>
-              <RoleDropDown setRole={setRole} />
-            </div>
-            <div className="form-group">
-              <FormLabel className="label">School: </FormLabel>
-              <SchoolDropDown setSchool={setSchool} />
-            </div>
-          </>
-        )}
-        {error && <p className="error">{error}</p>}
-        <Button type="submit" variant="contained" color="primary">
+            <TextField
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              required
+            />
+          </div>
+      {isSignUp && (
+        <>
+          <div className="form-group" style={{ marginBottom: '15px' }}>
+            <FormLabel className="label">Role: </FormLabel>
+            <RoleDropDown setRole={setRole} />
+          </div>
+          <div className="form-group" style={{ marginBottom: '15px' }}>
+            <FormLabel className="label">School: </FormLabel>
+            <SchoolDropDown setSchool={setSchool} />
+          </div>
+        </>
+      )}
+      {error && <p className="error" style={{ color: 'red', marginTop: '10px', fontSize: '14px' }}>{error}</p>}
+        <Button type="submit" variant="contained" color="primary" style={{ marginTop: '20px' }}>
           {isSignUp ? "Sign Up" : "Login"}
         </Button>
       </form>
-      <Button onClick={() => setIsSignUp(!isSignUp)}>
-        {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
-      </Button>
+        <Button onClick={() => setIsSignUp(!isSignUp)} style={{ marginTop: '20px' }}>
+          {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
+        </Button>
+      </div>
     </div>
-    </div>
+
   );
 }

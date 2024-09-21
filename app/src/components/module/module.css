@@ -8,7 +8,7 @@
   width: fit-content;
   padding: 1.5rem;
   box-shadow: 2px 1vh 1vh 1px rgb(0 0 0 / 20%);
-  width: 80%;
+  width: 100%;
   border-radius: 15px;
   font-family: 'Lato';
   height:35vw;
@@ -28,6 +28,7 @@
 
   .data{
     vertical-align: middle;
+    margin:auto;
   }
   
   h1{
@@ -67,3 +68,21 @@
     }
   }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .module {
+    display: flex;
+    background-color: #bcecfc;
+    font-family: 'Lato';
+    height:fit-content;
+    align-items:center;
+  
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up)
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */ 
