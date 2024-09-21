@@ -7,7 +7,7 @@ import {
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { redirect, useNavigate, Navigate } from "react-router-dom"; // Import useNavigate
-import "../index.css";
+import "../Login.css";
 import RoleDropDown from "../components/RoleDropdown";
 import SchoolDropDown from "../components/SchoolDropdown";
 import { collection, query, where, getDocs } from "firebase/firestore"; // Import necessary Firestore methods

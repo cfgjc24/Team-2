@@ -1,0 +1,95 @@
+/* Center the form on the page */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make sure the container takes up the full height */
+    background-color: #f7f8fa; /* Soft background color */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default paddings */
+  }
+  
+  /* Form container */
+  form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limit form width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add space between form elements */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+  
+  /* Labels */
+  .label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333; /* Darker label color for readability */
+    margin-bottom: 6px;
+  }
+  
+  /* Text input fields */
+  .MuiTextField-root {
+    width: 100%;
+  }
+  
+  /* Error message */
+  .error {
+    color: #e63946; /* Soft red */
+    font-size: 12px;
+    margin-top: -10px;
+  }
+  
+  /* Center the login button */
+  button {
+    background-color: #1976d2; /* Primary button color */
+    color: white;
+    padding: 10px 0;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    width: 100%; /* Full width button */
+    display: block; /* Ensures button is treated as block element */
+  }
+
+  button {
+    background-color: #1976d2; /* Primary button color */
+    color: white;
+    padding: 10px 0;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    width: 100%; /* Full width button */
+    display: block; /* Ensures button is treated as block element */
+  }
+  
+  button:hover {
+    background-color: #1565c0; /* Slightly darker on hover */
+  }
+  
+  .switch-button {
+    background: none;
+    border: none;
+    color: #1976d2;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    display:inline-block
+  }
+  
+  .switch-button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    form {
+      padding: 20px;
+      box-shadow: none; /* Simplify on smaller screens */
+    }
+  }
+  
