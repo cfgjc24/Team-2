@@ -11,11 +11,11 @@ export default function Home() {
           <h1 id="logo"><a href="index.html">First Generation Investors </a></h1>
           <nav id="nav">
             <ul>
-              <li class="current"><a href="http://127.0.0.1:5173/">Home</a></li>
+              <li class="current"><a href="#">Home</a></li>
               <li class="submenu">
-                <a href="#">Student</a>
+                {/* <a href="#">Student</a>
                 <a href="http://127.0.0.1:5173/admin">Admin</a>
-                <a href="#">Tutor</a>
+                <a href="#">Tutor</a> */}
                 <ul>
                   <li><a href="left-sidebar.html">Left Sidebar</a></li>
                   <li><a href="right-sidebar.html">Right Sidebar</a></li>
@@ -52,7 +52,6 @@ export default function Home() {
             <header>
               <h2>First Generation Investors</h2>
             </header>
-            <h3>Mission:</h3>
             <p>First Generation Investors (FGI) teaches high school students the power of investing and brings
               classroom lessons to life by providing students with real money to invest.</p>
             <footer>
@@ -83,43 +82,13 @@ export default function Home() {
 
 
 
-          <section class="wrapper style2 container special-alt whyYouHere">
+          <section class="wrapper style2 container">
             <div class="row gtr-50">
-              {/* <div class="col-8 col-12-narrower"> */}
-
-
-              {/* <header>
-                  <h2>Why are you here?</h2>
-                </header>
-                <p>With this application, we aim to collect and analyze student and tutor data to display impact for donors and investors, thereby increasing funding for FGI.</p>
-                <footer>
-                  <ul class="buttons">
-                    <li><a href="https://www.firstgenerationinvestors.com/" class="button">Find Out More</a></li>
-                  </ul>
-                </footer> */}
-
-
-
-              {/* </div> */}
-              <header class="special container">
+              <header class="container whyYouHere">
                 <span class="icon solid fa-chart-bar"></span>
                 <h2>Why are you here?</h2>
                 <p>With this application, we aim to collect and analyze student and tutor data to display impact for donors and investors, thereby increasing funding for FGI.</p>
               </header>
-              <div class="col-4 col-12-narrower imp-narrower">
-
-
-                <ul class="featured-icons">
-                  <li><span class="icon fa-clock"><span class="label">Feature 1</span></span></li>
-                  <li><span class="icon solid fa-volume-up"><span class="label">Feature 2</span></span></li>
-                  <li><span class="icon solid fa-laptop"><span class="label">Feature 3</span></span></li>
-                  <li><span class="icon solid fa-inbox"><span class="label">Feature 4</span></span></li>
-                  <li><span class="icon solid fa-lock"><span class="label">Feature 5</span></span></li>
-                  <li><span class="icon solid fa-cog"><span class="label">Feature 6</span></span></li>
-                </ul>
-
-
-              </div>
             </div>
           </section>
 
@@ -176,9 +145,7 @@ export default function Home() {
 
 
             <header class="major">
-              <h2>Learn <strong>Finance</strong></h2>
-              <h2>Build <strong>Community</strong></h2>
-              <h2>Be <strong>Prepared</strong></h2>
+              <h2><strong>Enroll.</strong> <strong>Teach.</strong><strong>Invest.</strong></h2>
             </header>
 
 
@@ -230,7 +197,7 @@ export default function Home() {
 
           <header>
             <h2>Ready to learn <strong>something</strong>?</h2>
-            <p>Fill out our enrollment verification form and get started today! Like our mission, please do donate!</p>
+            <p>Fill out our enrollment verification form and get started today! Like our mission? Please do donate!</p>
           </header>
           <footer>
             <ul class="buttons">

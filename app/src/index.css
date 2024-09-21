@@ -10,7 +10,7 @@
 }
 
 button{
-    background-color: #2A92EF;
+    background-color: #bcecfc;
     color: black;
     padding: 14px 20px;
     margin: 8px 0;
@@ -169,6 +169,7 @@ body {
 
 #header {
   padding-top: 20px; /* Adjust to increase space between top and content */
+	color:black !important;
 }
 
 #page-wrapper {
@@ -2338,9 +2339,9 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 button.primary,
 .button.primary {
-  background: #83d3c9;
-  border-color: #83d3c9;
-  color: #fff !important;
+  background: #bcecfc;
+  border-color: #bcecfc;
+  color: black !important;
 }
 
 input[type="button"].primary:hover,
@@ -2382,12 +2383,12 @@ button.small,
 }
 
 .wrapper.style2 {
-  background-color: #83d3c9;
-  background-image: url("images/light-bl.svg"), url("images/light-br.svg");
+  background-color: #bcecfc;
+  /* background-image: url("images/light-bl.svg"), url("images/light-br.svg"); */
   background-position: bottom left, bottom right;
   background-repeat: no-repeat, no-repeat;
   background-size: 25em, 25em;
-  color: #fff;
+  color: black;
 }
 
 .wrapper.style2 input[type="button"]:hover,
@@ -2796,13 +2797,13 @@ body.index #main {
 
 #cta {
   background-attachment: scroll, scroll, scroll, fixed;
-  background-color: #645862;
+  background-color: #bcecfc;
   background-image: url("images/light-tl.svg"), url("images/light-tr.svg"),
     url("images/overlay.png"), url("../../images/banner.jpg");
   background-position: top left, top right, top left, bottom center;
   background-repeat: no-repeat, no-repeat, repeat, no-repeat;
   background-size: 25em, 25em, auto, cover;
-  color: #fff;
+  color: black;
   padding: 5em;
   text-align: center;
 }
