@@ -10,7 +10,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Admin from '../src/pages/Admin'
 import Login from '../src/pages/Login'
 import Home from '../src/pages/Home'
-import LandingPage from '../src/pages/LandingPage'
+import LandingPage from '../src/pages/Landing_Page'
 
 export default function App() {
   return (
