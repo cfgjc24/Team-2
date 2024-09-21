@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Bar } from 'react-chartjs-2'
 import 'chart.js/auto'
 
-let PreConfidenceChart = () => {
+let PostConfidenceChart = () => {
 
   // const [chart, setChart] = useState({})
 
@@ -50,4 +50,4 @@ let PreConfidenceChart = () => {
     </div>
   )
 }
-export default PreConfidenceChart;
+export default PostConfidenceChart;
