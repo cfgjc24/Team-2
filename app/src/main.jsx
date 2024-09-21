@@ -8,11 +8,12 @@ import {
 } from "react-router-dom";
 
 import Admin from '../src/pages/Admin'
+import Student from '../src/pages/Student'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Admin />,
+    element: <Student/>,
   }
 ]);
 
