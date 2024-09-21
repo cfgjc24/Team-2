@@ -12,7 +12,8 @@ import Admin from "../src/pages/Admin";
 import Home from "../src/pages/Home";
 import LandingPage from "../src/pages/Landing_Page";
 import Login from "./pages/Login";
-import Student from "./pages/Student"
+import Student from "./pages/Student";
+import StudentFeedbackTable from "./pages/StudentFeedbackTable";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/landing" element={<LandingPage />} />
         <Route path="/student" element={<Student />} />
+        <Route path="/studentfeedback" element={<StudentFeedbackTable />} />
       </Routes>
     </Router>
   );

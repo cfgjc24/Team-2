@@ -8,8 +8,8 @@ import {
 import { doc, setDoc } from "firebase/firestore";
 import { redirect, useNavigate, Navigate } from "react-router-dom"; // Import useNavigate
 import "../index.css";
-import RoleDropDown from '../components/RoleDropdown'
-import SchoolDropDown from '../components/SchoolDropdown'
+import RoleDropDown from "../components/RoleDropdown";
+import SchoolDropDown from "../components/SchoolDropdown";
 import { collection, query, where, getDocs } from "firebase/firestore"; // Import necessary Firestore methods
 
 export default function Login() {
@@ -56,9 +56,8 @@ export default function Login() {
 
         if (role === "Admin") {
           navigate("/admin");
-        }
-        else if (role === "Student") {
-          navigate("/Student")
+        } else if (role === "Student") {
+          navigate("/Student");
         }
       } else {
         // Sign in the user
@@ -71,7 +70,10 @@ export default function Login() {
         console.log("Sign in successful", user);
 
         // Fetch the role from Firestore for the signed-in user based on email
-        const q = query(collection(firestore, "users"), where("email", "==", user.email));
+        const q = query(
+          collection(firestore, "users"),
+          where("email", "==", user.email)
+        );
         const querySnapshot = await getDocs(q);
 
         if (!querySnapshot.empty) {
@@ -102,21 +104,23 @@ export default function Login() {
     <div className="login">
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <FormLabel className="label">Password:</FormLabel>
+          <FormLabel className="label">Email: </FormLabel>
           <TextField
-            fullWidth
-            variant="outlined"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            required
           />
         </div>
         <div className="form-group">
-          <FormLabel className="label">Role:</FormLabel>
+          <FormLabel className="label">Password: </FormLabel>
           <TextField
-            
-            fullWidth
-            variant="outlined"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            required
           />
         </div>
-
         {isSignUp && (
           <>
             <div className="form-group">
@@ -137,7 +141,6 @@ export default function Login() {
       <Button onClick={() => setIsSignUp(!isSignUp)}>
         {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
       </Button>
-
     </div>
   );
 }
