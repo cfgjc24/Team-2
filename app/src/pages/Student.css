@@ -1,27 +1,32 @@
-html{
-  margin:auto;
-  text-align:center;
-  width:100vw;
+html {
+  margin: auto;
+  text-align: center;
+  width: 100vw;
 }
 
-.StudentClass{
-  /* background-color:white; */
-  width:100vw;
+.StudentClass {
+  width: 100vw;
 
-  .grid{
+  h1 {
+    font-size: 3vw;
+  }
+
+  .grid {
     display: grid;
     padding: 1.5vw;
     grid-template-rows: auto;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
+    /* Each column now takes up more space */
     justify-content: center;
     margin: auto;
     column-gap: 1.5vw;
     row-gap: 5vh;
     width: 90%;
-    max-width:100%;
+    max-width: 100%;
+    grid-column: span 2;
   }
 
-  #classStart{
-    font-style:italic;
+  #classStart {
+    font-style: italic;
   }
 }
