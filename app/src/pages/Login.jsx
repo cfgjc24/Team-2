@@ -92,6 +92,8 @@ export default function Login() {
             } else if (userRole === "Student") {
               console.log(userRole);
               navigate("/student");
+            } else if (userRole === "Tutor") {
+              navigate("/student");
             }
           });
         } else {
@@ -119,7 +121,7 @@ export default function Login() {
       <div className="login" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', width: '100%', maxWidth: '400px', marginTop: '40px' }}>
         <form onSubmit={handleSubmit}>
           <div className="form-group" style={{ marginBottom: '15px' }}>
-          <FormLabel className="label">Email: </FormLabel>
+            <FormLabel className="label">Email: </FormLabel>
             <TextField
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -128,7 +130,7 @@ export default function Login() {
             />
           </div>
           <div className="form-group" style={{ marginBottom: '15px' }}>
-          <FormLabel className="label">Password: </FormLabel>
+            <FormLabel className="label">Password: </FormLabel>
             <TextField
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -136,23 +138,23 @@ export default function Login() {
               required
             />
           </div>
-      {isSignUp && (
-        <>
-          <div className="form-group" style={{ marginBottom: '15px' }}>
-            <FormLabel className="label">Role: </FormLabel>
-            <RoleDropDown setRole={setRole} />
-          </div>
-          <div className="form-group" style={{ marginBottom: '15px' }}>
-            <FormLabel className="label">School: </FormLabel>
-            <SchoolDropDown setSchool={setSchool} />
-          </div>
-        </>
-      )}
-      {error && <p className="error" style={{ color: 'red', marginTop: '10px', fontSize: '14px' }}>{error}</p>}
-        <Button type="submit" variant="contained" color="primary" style={{ marginTop: '20px' }}>
-          {isSignUp ? "Sign Up" : "Login"}
-        </Button>
-      </form>
+          {isSignUp && (
+            <>
+              <div className="form-group" style={{ marginBottom: '15px' }}>
+                <FormLabel className="label">Role: </FormLabel>
+                <RoleDropDown setRole={setRole} />
+              </div>
+              <div className="form-group" style={{ marginBottom: '15px' }}>
+                <FormLabel className="label">School: </FormLabel>
+                <SchoolDropDown setSchool={setSchool} />
+              </div>
+            </>
+          )}
+          {error && <p className="error" style={{ color: 'red', marginTop: '10px', fontSize: '14px' }}>{error}</p>}
+          <Button type="submit" variant="contained" color="primary" style={{ marginTop: '20px' }}>
+            {isSignUp ? "Sign Up" : "Login"}
+          </Button>
+        </form>
         <Button onClick={() => setIsSignUp(!isSignUp)} style={{ marginTop: '20px' }}>
           {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
         </Button>
