@@ -1,16 +1,17 @@
-import React from 'react'
-import { useState } from 'react'
-import './App.css'
-import { ReactDOM } from 'react'
+import React from "react";
+import { useState } from "react";
+import "./App.css";
+import { ReactDOM } from "react";
 
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Admin from '../src/pages/Admin'
-import Login from '../src/pages/Login'
-import Home from '../src/pages/Home'
-import LandingPage from '../src/pages/LandingPage'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Admin from "../src/pages/Admin";
+//import Login from '../src/pages/Login'
+import Home from "../src/pages/Home";
+import LandingPage from "../src/pages/Landing_Page";
+import Login from "./pages/Login";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,20 +21,19 @@ root.render(<Home />)
 =======
 >>>>>>> de215a58e07959278b9cd3a1c3a11c56a967a787
 export default function App() {
-  return (
-    <Router>
-      {/* Wrap your Route components inside the Routes component */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/landing" element={<LandingPage />} />
-      </Routes>
-    </Router>
-  );
+    return (
+        <Router>
+            {/* Wrap your Route components inside the Routes component */}
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/admin" element={<Admin />} />
+                <Route path="/landing" element={<LandingPage />} />
+            </Routes>
+        </Router>
+    );
 <<<<<<< HEAD
 }
 >>>>>>> 0f41c2ddf9d5c4c95dcbbdf911cbf320f3763302
 =======
 }
->>>>>>> de215a58e07959278b9cd3a1c3a11c56a967a787

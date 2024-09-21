@@ -1,19 +1,20 @@
 import { initializeApp } from "firebase/app";
-
-import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
+  apiKey: "***REMOVED***-He4",
+  authDomain: "***REMOVED***",
+  projectId: "***REMOVED***",
+  storageBucket: "***REMOVED***.appspot.com",
+  messagingSenderId: "***REMOVED***",
+  appId: "1:***REMOVED***:web:fd30ceb3b9ebc367a37cf6",
 };
 
-const auth = getAuth(app);
-
 const app = initializeApp(firebaseConfig);
-const storage = getStorage(app);
+const auth = getAuth(app);
 const firestore = getFirestore(app);
-export { auth, storage, firestore };
+const storage = getStorage(app);
+
+export { auth, firestore, storage };
