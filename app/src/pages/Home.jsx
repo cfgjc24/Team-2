@@ -7,9 +7,6 @@ export default function Home() {
     <div>
 
       <div id="page-wrapper">
-
-
-
         <header id="header" class="alt">
           <h1 id="logo"><a href="index.html">First Generation Investors </a></h1>
           <nav id="nav">
@@ -57,7 +54,7 @@ export default function Home() {
             </header>
             <h3>Mission:</h3>
             <p>First Generation Investors (FGI) teaches high school students the power of investing and brings
-classroom lessons to life by providing students with real money to invest.</p>
+              classroom lessons to life by providing students with real money to invest.</p>
             <footer>
               <ul class="buttons stacked">
                 <li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
@@ -76,22 +73,22 @@ classroom lessons to life by providing students with real money to invest.</p>
         <article id="main">
 
 
-          <header class="special container">
+          <header class="special container whoWeAre">
             <span class="icon solid fa-chart-bar"></span>
             <h2>Who are we?</h2>
             <p>FGI believes that financial education is key to unlocking a brighter future. Many high school students
-may not have access to the resources they need to learn about investing and FGI is doing the work to
-bridge the gap.</p>
+              may not have access to the resources they need to learn about investing and FGI is doing the work to
+              bridge the gap.</p>
           </header>
 
 
 
-          <section class="wrapper style2 container special-alt">
+          <section class="wrapper style2 container special-alt whyYouHere">
             <div class="row gtr-50">
-              <div class="col-8 col-12-narrower">
+              {/* <div class="col-8 col-12-narrower"> */}
 
 
-                <header>
+              {/* <header>
                   <h2>Why are you here?</h2>
                 </header>
                 <p>With this application, we aim to collect and analyze student and tutor data to display impact for donors and investors, thereby increasing funding for FGI.</p>
@@ -99,10 +96,16 @@ bridge the gap.</p>
                   <ul class="buttons">
                     <li><a href="https://www.firstgenerationinvestors.com/" class="button">Find Out More</a></li>
                   </ul>
-                </footer>
+                </footer> */}
 
 
-              </div>
+
+              {/* </div> */}
+              <header class="special container">
+                <span class="icon solid fa-chart-bar"></span>
+                <h2>Why are you here?</h2>
+                <p>With this application, we aim to collect and analyze student and tutor data to display impact for donors and investors, thereby increasing funding for FGI.</p>
+              </header>
               <div class="col-4 col-12-narrower imp-narrower">
 
 
@@ -183,14 +186,14 @@ bridge the gap.</p>
               <div class="col-6 col-12-narrower">
 
 
-                
+
 
 
               </div>
               <div class="col-6 col-12-narrower">
 
 
-                
+
 
 
               </div>
@@ -211,7 +214,7 @@ bridge the gap.</p>
             </div>
 
 
-           
+
 
 
           </section>
@@ -241,7 +244,7 @@ bridge the gap.</p>
 
 
 
-        
+
 
 
       </div>
