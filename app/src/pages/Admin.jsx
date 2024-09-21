@@ -20,10 +20,10 @@ function Admin() {
       </div>
 
       <div style={{ marginBottom: "40px" }}></div>
-      <h1>Satisfaction After Modules</h1>
+      <h2>Satisfaction After Modules</h2>
       <SatisfactionAfterChart />
       <div style={{ marginBottom: "40px" }}></div>
-      <h1>View Feedback</h1>
+      <h2>View Feedback</h2>
       <div style={{ display: "flex", justifyContent: "center", gap: "60px" }}>
         <StudentFeedback />
         <TutorFeedback />
