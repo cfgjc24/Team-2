@@ -111,9 +111,7 @@ const PreConfidenceChart = () => {
       {loading ? (
         <p>Loading data...</p>
       ) : chartData ? (
-        <div style={{ width: "55%" }}>
           <Bar data={chartData} options={chartOptions} />
-        </div>
       ) : (
         <p>No data available</p>
       )}
