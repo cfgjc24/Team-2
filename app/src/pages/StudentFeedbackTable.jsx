@@ -101,8 +101,10 @@ export default function StudentFeedbackTable() {
         style={{ height: "500px", width: "100%" }}
         className="ag-theme-quartz"
       ></div>
-      <button onClick={handleExportCSV}>Export to CSV</button>
-      <button onClick={handleExportExcel}>Export to Excel</button>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '20px'}}>
+          <button onClick={handleExportCSV}>Export to CSV</button>
+          <button onClick={handleExportExcel}>Export to Excel</button>
+        </div>
     </div>
   );
 }
