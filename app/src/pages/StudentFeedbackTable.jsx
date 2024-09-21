@@ -101,10 +101,28 @@ export default function StudentFeedbackTable() {
         style={{ height: "500px", width: "100%" }}
         className="ag-theme-quartz"
       ></div>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '20px'}}>
-          <button onClick={handleExportCSV}>Export to CSV</button>
-          <button onClick={handleExportExcel}>Export to Excel</button>
-        </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "40px", // Reduced gap between buttons
+          marginTop: "20px",
+          color: "#BCECFC",
+        }}
+      >
+        <button
+          style={{ width: "50px", padding: "3px" }}
+          onClick={handleExportCSV}
+        >
+          Export to CSV
+        </button>
+        <button
+          style={{ width: "50px", padding: "3px" }}
+          onClick={handleExportExcel}
+        >
+          Export to Excel
+        </button>
+      </div>
     </div>
   );
 }

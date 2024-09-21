@@ -3,17 +3,16 @@ import "@ag-grid-community/styles/ag-grid.css";
 import "@ag-grid-community/styles/ag-theme-quartz.css";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
 import { CsvExportModule } from "@ag-grid-community/csv-export";
-import { ExcelExportModule } from "@ag-grid-enterprise/excel-export"; // Import Excel Export module
+import { ExcelExportModule } from "@ag-grid-enterprise/excel-export";
 import { ModuleRegistry, Grid } from "@ag-grid-community/core";
 import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "./../Firebase";
 
-// Registering the necessary ag-Grid modules
 ModuleRegistry.registerModules([
   ClientSideRowModelModule,
   CsvExportModule,
   ExcelExportModule,
-]); // Register Excel Export
+]);
 
 const columnDefs = [
   { field: "user_id", headerName: "User ID", width: 150 },
@@ -26,25 +25,22 @@ const columnDefs = [
 
 export default function TutorFeedbackTable() {
   const [rowData, setRowData] = useState([]);
-  const gridRef = useRef(null); // Store the grid instance reference
+  const gridRef = useRef(null);
 
-  // Fetch data from Firebase
   useEffect(() => {
     const fetchData = async () => {
       const querySnapshot = await getDocs(collection(firestore, "tutor_data"));
       const data = querySnapshot.docs.map((doc) => doc.data());
-      setRowData(data.slice(0, 20)); // Set only the first 20 rows
+      setRowData(data.slice(0, 20));
     };
 
     fetchData();
   }, []);
 
-  // Initialize the grid and update row data
   useEffect(() => {
     const gridDiv = document.querySelector("#myGrid");
 
     if (!gridRef.current) {
-
       gridRef.current = new Grid(gridDiv, {
         rowData,
         columnDefs,
@@ -67,23 +63,21 @@ export default function TutorFeedbackTable() {
     };
   }, [rowData]);
 
-  // Export to CSV function
   const handleExportCSV = () => {
     if (gridRef.current) {
       gridRef.current.gridOptions.api.exportDataAsCsv({
-        fileName: "tutor_feedback.csv", 
-        skipHeader: false, 
-        allColumns: true, 
+        fileName: "tutor_feedback.csv",
+        skipHeader: false,
+        allColumns: true,
       });
     }
   };
 
-  // Export to Excel function
   const handleExportExcel = () => {
     if (gridRef.current) {
       gridRef.current.gridOptions.api.exportDataAsExcel({
         fileName: "tutor_feedback.xlsx",
-        sheetName: "Feedback Data", 
+        sheetName: "Feedback Data",
       });
     }
   };
@@ -96,8 +90,28 @@ export default function TutorFeedbackTable() {
         style={{ height: "500px", width: "100%" }}
         className="ag-theme-quartz"
       ></div>
-      <button onClick={handleExportCSV}>Export to CSV</button>
-      <button onClick={handleExportExcel}>Export to Excel</button>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "40px",
+          marginTop: "20px",
+          color: "#BCECFC",
+        }}
+      >
+        <button
+          style={{ width: "50px", padding: "3px" }}
+          onClick={handleExportCSV}
+        >
+          Export to CSV
+        </button>
+        <button
+          style={{ width: "50px", padding: "3px" }}
+          onClick={handleExportExcel}
+        >
+          Export to Excel
+        </button>
+      </div>
     </div>
   );
 }
