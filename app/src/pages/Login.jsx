@@ -11,7 +11,7 @@ import "../Login.css";
 import RoleDropDown from "../components/RoleDropdown";
 import SchoolDropDown from "../components/SchoolDropdown";
 import { collection, query, where, getDocs } from "firebase/firestore"; // Import necessary Firestore methods
-import logo from '../assets/firstgenerationinvestors_logo.jpeg';
+import logo from "../assets/firstgenerationinvestors_logo.jpeg";
 import Navbar from "../components/navbar";
 
 export default function Login() {
@@ -60,8 +60,7 @@ export default function Login() {
           navigate("/admin");
         } else if (role === "Student") {
           navigate("/student");
-        }
-        else if (role === "Tutor") {
+        } else if (role === "Tutor") {
           navigate("/tutor");
         }
       } else {
@@ -108,19 +107,46 @@ export default function Login() {
   };
 
   return (
-    <div className="landing-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', height: '100vh' }}>
+    <div
+      className="landing-container"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        height: "100vh",
+      }}
+    >
       <Navbar></Navbar>
-      <header className="landing-header" style={{ width: '100%', textAlign: 'center', marginTop: '20px' }}>
+      <header
+        className="landing-header"
+        style={{ width: "100%", textAlign: "center", marginTop: "20px" }}
+      >
         <nav className="landing-nav">
-          <div className="logo" style={{ marginBottom: '20px' }}>
-            <img src={logo} alt="First Generation Investors Logo" style={{ maxWidth: '150px' }} />
+          <div className="logo" style={{ marginBottom: "70px" }}>
+            <img
+              src={logo}
+              alt="First Generation Investors Logo"
+              style={{ maxWidth: "150px" }}
+            />
           </div>
         </nav>
       </header>
 
-      <div className="login" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', width: '100%', maxWidth: '400px', marginTop: '40px' }}>
+      <div
+        className="login"
+        style={{
+          backgroundColor: "white",
+          padding: "40px",
+          borderRadius: "8px",
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+          width: "100%",
+          maxWidth: "400px",
+          marginTop: "40px",
+        }}
+      >
         <form onSubmit={handleSubmit}>
-          <div className="form-group" style={{ marginBottom: '15px' }}>
+          <div className="form-group" style={{ marginBottom: "15px" }}>
             <FormLabel className="label">Email: </FormLabel>
             <TextField
               value={email}
@@ -129,7 +155,7 @@ export default function Login() {
               required
             />
           </div>
-          <div className="form-group" style={{ marginBottom: '15px' }}>
+          <div className="form-group" style={{ marginBottom: "15px" }}>
             <FormLabel className="label">Password: </FormLabel>
             <TextField
               value={password}
@@ -140,26 +166,40 @@ export default function Login() {
           </div>
           {isSignUp && (
             <>
-              <div className="form-group" style={{ marginBottom: '15px' }}>
+              <div className="form-group" style={{ marginBottom: "15px" }}>
                 <FormLabel className="label">Role: </FormLabel>
                 <RoleDropDown setRole={setRole} />
               </div>
-              <div className="form-group" style={{ marginBottom: '15px' }}>
+              <div className="form-group" style={{ marginBottom: "15px" }}>
                 <FormLabel className="label">School: </FormLabel>
                 <SchoolDropDown setSchool={setSchool} />
               </div>
             </>
           )}
-          {error && <p className="error" style={{ color: 'red', marginTop: '10px', fontSize: '14px' }}>{error}</p>}
-          <Button type="submit" variant="contained" color="primary" style={{ marginTop: '20px' }}>
+          {error && (
+            <p
+              className="error"
+              style={{ color: "red", marginTop: "10px", fontSize: "14px" }}
+            >
+              {error}
+            </p>
+          )}
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            style={{ marginTop: "20px" }}
+          >
             {isSignUp ? "Sign Up" : "Login"}
           </Button>
         </form>
-        <Button onClick={() => setIsSignUp(!isSignUp)} style={{ marginTop: '20px' }}>
+        <Button
+          onClick={() => setIsSignUp(!isSignUp)}
+          style={{ marginTop: "20px" }}
+        >
           {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
         </Button>
       </div>
     </div>
-
   );
 }
