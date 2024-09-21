@@ -23,7 +23,6 @@ export default function Login() {
         <div className="form-group">
           <FormLabel className="label">Password:</FormLabel>
           <TextField
-            onChange={(e) => setPassword(e.target.value)}
             fullWidth
             variant="outlined"
           />
