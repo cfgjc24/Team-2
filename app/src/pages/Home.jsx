@@ -128,9 +128,9 @@ bridge the gap.</p>
                 <section>
                   <span class="icon solid featured fa-check"></span>
                   <header>
-                    <h3>This is Something</h3>
+                    <h3>Student Portal</h3>
                   </header>
-                  <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+                  <p>Access to all modules and progress with each module. Complete all 8 modules with the capstone to recieve $100. Complete an attendance form and end of class survey to show your progress throughout the course. Your feedback matters!</p>
                 </section>
 
 
@@ -141,9 +141,9 @@ bridge the gap.</p>
                 <section>
                   <span class="icon solid featured fa-check"></span>
                   <header>
-                    <h3>Also Something</h3>
+                    <h3>Tutor Portal</h3>
                   </header>
-                  <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+                  <p>Have an attendance form to verify students are showing up, as well as start class and show students class is in session.</p>
                 </section>
 
 
@@ -154,9 +154,9 @@ bridge the gap.</p>
                 <section>
                   <span class="icon solid featured fa-check"></span>
                   <header>
-                    <h3>Probably Something</h3>
+                    <h3>Admin Portal</h3>
                   </header>
-                  <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+                  <p></p>
                 </section>
 
 
