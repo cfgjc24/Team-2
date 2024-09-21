@@ -12,8 +12,8 @@ import Admin from "../src/pages/Admin";
 import Home from "../src/pages/Home";
 import LandingPage from "../src/pages/Landing_Page";
 import Login from "./pages/Login";
-import Tutor from "./pages/Tutor";
-import Tutor_Survey from "./pages/Tutor_Survey";
+import Student from "./pages/Student"
+
 export default function App() {
   return (
     <Router>
@@ -23,8 +23,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/landing" element={<LandingPage />} />
-        <Route path="/tutor" element={<Tutor />} />
-        <Route path="/tutor_survey" element={<Tutor_Survey />} />
+        <Route path="/student" element={<Student />} />
       </Routes>
     </Router>
   );
