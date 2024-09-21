@@ -1,13 +1,24 @@
-button {
-  background-color: #2a92ef;
-  color: black;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 50%;
-  display: flex;
-  justify-content: center;
+#logo{
+	float:left;
+}
+.wrapper{
+	display:inline-block;
+	margin:auto;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+button{
+    background-color: #2A92EF;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 button:hover {
@@ -2685,19 +2696,18 @@ button.small,
   }
 }
 
-#banner {
-  background-attachment: scroll, scroll, scroll, fixed;
-  background-color: #645862;
-  background-image: url("images/light-bl.svg"), url("images/light-br.svg"),
-    url("images/overlay.png"), url("../../images/banner.jpg");
-  background-position: bottom left, bottom right, top left, top center;
-  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-  background-size: 25em, 25em, auto, cover;
-  color: #fff;
-  cursor: default;
-  padding: 6em 0;
-  text-align: center;
-}
+	#banner {
+		background-attachment: scroll, scroll, scroll, fixed;
+		background-color: #bcecfc;
+		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
+		background-position: bottom left, bottom right, top left, top center;
+		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+		background-size: 25em, 25em, auto, cover;
+		color: #fff;
+		cursor: default;
+		padding: 6em 0;
+		text-align: center;
+	}
 
 #banner .inner {
   -moz-animation: reveal-banner 1s 0.25s ease-in-out;
@@ -2754,14 +2764,13 @@ button.small,
 
 /* Main */
 
-#main {
-  background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"),
-    url("images/dark-bl.svg"), url("images/dark-br.svg");
-  background-position: top left, top right, bottom left, bottom right;
-  background-repeat: no-repeat;
-  background-size: 25em;
-  padding: 7em 0;
-}
+	#main {
+		background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
+		background-position: top left, top right, bottom left, bottom right;
+		background-repeat: no-repeat;
+		background-size: 25em;
+		/* padding: 7em 0; */
+	}
 
 #main > :last-child {
   margin-bottom: 0;
