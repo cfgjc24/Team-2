@@ -14,7 +14,8 @@ import StudentFeedbackTable from "./pages/StudentFeedbackTable";
 import PreSurvey from "./pages/PreSurvey"
 import PostSurvey from "./pages/PostSurvey";
 import TutorFeedbackTable from "./pages/TutorFeedbackTable";
-import Navbar from "./components/navbar";
+//import Navbar from "./components/navbar";
+
 
 export default function App() {
   return (
@@ -32,7 +33,6 @@ export default function App() {
         <Route path="/presurvey" element={<PreSurvey />} />
         <Route path="/postsurvey" element={<PostSurvey />} />
         <Route path="/tutorfeedback" element={<TutorFeedbackTable/>} />
-        <Route path="/navbar" element={<Navbar/>} />
 
 
       </Routes>
