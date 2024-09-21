@@ -17,7 +17,7 @@ export default function Home() {
       <div id="page-wrapper">
         <img src={Logo}></img>
         <header id="header" class="alt">
-          <h1 id="logo"><a href="index.html">First Generation Investors </a></h1>
+          <h1 id="logo"><a href="">First Generation Investors </a></h1>
           <nav id="nav">
             <ul>
               <li class="current"><a href="http://127.0.0.1:5173/">Home</a></li>

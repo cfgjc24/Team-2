@@ -11,14 +11,6 @@ import Logo from '../assets/logo.png';
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
 
-    const handleOpenDrawer = () => {
-        setIsOpen(true)
-    }
-
-    const handleCloseDrawer = () => {
-        setIsOpen(false)
-    }
-
     return (
         <Box>
           <AppBar sx={{ backgroundColor: "white", height: '52px', width: '100%', boxShadow: 'none' }}>
