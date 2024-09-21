@@ -40,3 +40,12 @@ button:hover {
 .label{
   color: #2A92EF;
 }
+
+.navbar{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  background-color: #2A92EF;
+  color: black;
+}
