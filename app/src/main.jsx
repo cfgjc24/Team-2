@@ -7,12 +7,12 @@ import {
 } from "react-router-dom";
 
 import Admin from '../src/pages/Admin'
-import Login from '../src/pages/Login'
+import LandingPage from '../src/pages/Landing_Page'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
+    element: <LandingPage />,
   },
   // {
   //   path: "/login",
