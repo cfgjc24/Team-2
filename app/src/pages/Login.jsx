@@ -12,8 +12,8 @@ export default function Login() {
     const [school, setSchool] = useState('')
 
   return (
-    <div>
-      <form class = "form">
+    <div class = "login">
+      <form>
   <div class = "username">
     <FormLabel>Username: </FormLabel>
     <TextField />
