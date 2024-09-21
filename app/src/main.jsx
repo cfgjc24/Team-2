@@ -9,11 +9,12 @@ import {
 
 import Admin from '../src/pages/Admin'
 import LandingPage from '../src/pages/Landing_Page'
+import Student from '../src/pages/Student'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage />,
+    element: <Student />,
   },
   // {
   //   path: "/login",
