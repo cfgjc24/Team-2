@@ -24,9 +24,6 @@ import { getAuth } from "firebase/auth";
 function Profile() {
     const [userProfile, setUserProfile] = useState(null)
 
-    const { isOpen, onClose } = useDisclosure()
-
-
     useEffect(() => {
         const auth = getAuth()
 
@@ -65,28 +62,7 @@ function Profile() {
                     </svg>
                 </AvatarBadge>
             </Avatar>
-            <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
-                <ModalContent>
-                    <ModalHeader>Something went wrong</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <Text>File not supported!</Text>
-                        <HStack mt={1}>
-                            <Text color="brand.cadet" fontSize="sm">
-                                Supported types:
-                            </Text>
-                            <Badge colorScheme="green">PNG</Badge>
-                            <Badge colorScheme="green">JPG</Badge>
-                            <Badge colorScheme="green">JPEG</Badge>
-                        </HStack>
-                    </ModalBody>
 
-                    <ModalFooter>
-                        <Button onClick={onClose}>Close</Button>
-                    </ModalFooter>
-                </ModalContent>
-            </Modal>
             <VStack spacing={1} align="center">
                 <Heading as="h3" fontSize="xl" color="brand.dark">
                     Name: {userProfile?.full_name}
