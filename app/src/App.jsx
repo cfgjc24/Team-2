@@ -1,9 +1,24 @@
-
+import React from 'react'
+import { useState } from 'react'
 import './App.css'
 import { ReactDOM } from 'react'
-import Student from './pages/Student'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Admin from '../src/pages/Admin'
+import Login from '../src/pages/Login'
+import Home from '../src/pages/Home'
 
-
-const root = document.getElementById('root')
-root.render(<Student/>)
-
+export default function App() {
+  return (
+    <Router>
+      {/* Wrap your Route components inside the Routes component */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </Router>
+  );
+}
