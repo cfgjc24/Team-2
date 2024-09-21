@@ -2,7 +2,7 @@ import React from 'react'
 import Module from '../components/module/module'
 import { useState, useEffect } from 'react'
 import './Student.css'
-
+import Navbar from '../components/navbar'
 function Student() {
   // array 1- 8 for mapping
   // each index 
@@ -24,7 +24,7 @@ function Student() {
 
 
   return (
-    <>
+    <><div><Navbar/>
       <div className="StudentClass">
         <h1>Student Portal</h1>
         <h3 id="className">Class is not in session</h3>
@@ -40,6 +40,7 @@ function Student() {
           ))}
         </div>
       </div>
+    </div>
     </>
   );
 }

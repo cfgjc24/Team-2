@@ -5,11 +5,13 @@ import SatisfactionAfterChart from "../components/SatisfactionAfterChart";
 import StudentFeedback from "../components/StudentFeedback";
 import TutorFeedback from "../components/TutorFeedback";
 import Stack from "@mui/material/Stack";
+import Navbar from "../components/navbar";
 
 function Admin() {
   return (
     <div>
-      <h2>Pre and Post-Confidence Surveys</h2>
+      <Navbar/>
+      <h1>Pre and Post-Confidence Surveys</h1>
       <Stack direction="row" spacing={4} justifyContent="center">
         <div style={{ flex: 1, textAlign: "center" }}>
           <h1>Pre-Confidence Survey</h1>
