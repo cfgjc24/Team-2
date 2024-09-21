@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Module from '../Components/TutorModule/Module.jsx';
 import '../Components/TutorModule/Tutor.css';
+import Navbar from '../components/navbar.jsx';
 
 
 function Tutor() {
@@ -23,6 +24,7 @@ function Tutor() {
   return (
     <>
       <div className="TutorClass">
+        <Navbar/>
         <h1>Tutor Portal</h1>
         <h3 id="className">Select A Class To Start</h3>
         <div className="grid">

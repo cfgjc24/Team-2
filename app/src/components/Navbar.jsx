@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { useState } from 'react'
 import { signOut } from 'firebase/auth'
 import Link from '@mui/material/Link'
+import { Link as RouterLink } from 'react-router-dom'
 
 
 export default function Navbar() {
@@ -19,11 +20,11 @@ export default function Navbar() {
 
     return (
         <Box>
-            <AppBar sx={{ backgroundColor: "Black"}}>
-                <Box display={'flex'} flexDirection={'row'} justifyContent={'space-between'} alignItems={'center'} >
-                    <Typography sx={{ml: '20px'}}>
-                        Home
-                    </Typography>
+            <AppBar sx={{ backgroundColor: "Black", height: '40px'}}>
+                <Box display={'flex'} flexDirection={'row'} justifyContent={'space-between'} alignItems={'center'}   >
+                    <Link component={RouterLink} to="/" sx={{ color: 'white', textDecoration: 'none' }}>
+                            Home
+                    </Link>
                     <IconButton size="large" color="inherit" onClick={handleOpenDrawer} style={{position: 'absolute', left: '650px'}} alignItems='right'>
                         <MenuIcon/>
                     </IconButton>
