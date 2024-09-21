@@ -111,15 +111,15 @@ const PostConfidenceChart = () => {
         justifyContent: "center",
       }}
     >
-    <div style={{ width: "45%" }}>
-      {loading ? (
-        <p>Loading data...</p>
-      ) : chartData ? (
-        <Bar data={chartData} options={chartOptions} />
-      ) : (
-        <p>No data available</p>
-      )}
-    </div>
+      <div style={{ width: "50%", height: "80%" }}>
+        {loading ? (
+          <p>Loading data...</p>
+        ) : chartData ? (
+          <Bar data={chartData} options={chartOptions} />
+        ) : (
+          <p>No data available</p>
+        )}
+      </div>
     </div>
   );
 };

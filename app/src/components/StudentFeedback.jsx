@@ -16,16 +16,30 @@ export default function StudentFeedback() {
   return (
     <Card sx={{ minWidth: 550, minHeight: 300 }}>
       <CardContent>
-        <Typography gutterBottom sx={{ color: "text.secondary", fontSize: 30 }}>
+        <Typography 
+          gutterBottom 
+          sx={{ color: "text.secondary", fontSize: 30, marginTop: "30px" }}
+        >
           View Student Feedback
         </Typography>
       </CardContent>
-      <CardActions sx={{ justifyContent: "center", marginTop: "100px" }}>
+      
+      <CardActions 
+        sx={{ 
+          justifyContent: "center", 
+          marginTop: "75px", 
+          paddingLeft: "50px",
+          paddingRight: "50px",
+        }}
+      >
         <Button
           size="small"
           variant="outlined"
           onClick={handleButtonClick} 
           sx={{
+            height: "60px",
+            padding: "0 30px",
+            fontSize: "16px",
             "&:hover": {
               backgroundColor: "lightblue",
               color: "white",
