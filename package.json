@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "@ag-grid-community/client-side-row-model": "^32.2.0",
+    "@ag-grid-community/core": "^32.2.0",
+    "@ag-grid-community/react": "^32.2.0",
+    "@ag-grid-community/styles": "^32.2.0",
     "chart.js": "^4.4.4"
   }
 }
