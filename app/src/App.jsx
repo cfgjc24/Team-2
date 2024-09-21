@@ -12,7 +12,7 @@ import Admin from "../src/pages/Admin";
 import Home from "../src/pages/Home";
 import LandingPage from "../src/pages/Landing_Page";
 import Login from "./pages/Login";
-
+import Tutor from "./pages/Tutor"
 export default function App() {
   return (
     <Router>
@@ -22,6 +22,7 @@ export default function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/admin" element={<Admin />} />
         <Route path="/landing" element={<LandingPage />} />
+        <Route path="/tutor" element={<Tutor />} />
       </Routes>
     </Router>
   );
