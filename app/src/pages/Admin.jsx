@@ -9,7 +9,7 @@ import Stack from "@mui/material/Stack";
 function Admin() {
   return (
     <div>
-      <h1>Pre and Post-Confidence Surveys</h1>
+      <h2>Pre and Post-Confidence Surveys</h2>
       <Stack direction="row" spacing={4} justifyContent="center">
         <div style={{ flex: 1, textAlign: "center" }}>
           <h1>Pre-Confidence Survey</h1>

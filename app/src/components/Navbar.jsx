@@ -9,7 +9,6 @@ import Logo from '../assets/logo.png';
 
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false)
 
     return (
         <Box>
