@@ -1,10 +1,5 @@
 import React from "react";
-import { useState } from "react";
 import "./App.css";
-import { ReactDOM } from "react";
-
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "../src/pages/Admin";
@@ -19,7 +14,6 @@ import StudentFeedbackTable from "./pages/StudentFeedbackTable";
 import PreSurvey from "./pages/PreSurvey"
 import PostSurvey from "./pages/PostSurvey";
 import TutorFeedbackTable from "./pages/TutorFeedbackTable";
-import Header from "./components/navbar";
 import Navbar from "./components/navbar";
 
 export default function App() {
