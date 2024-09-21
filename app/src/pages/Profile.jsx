@@ -22,14 +22,14 @@ import default_image from './assets/default_profile_image.jpg'
 function Profile() {
     const [userProfile] = useState(null) // Set userProfile state directly
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { isOpen, onClose } = useDisclosure()
 
     return (
         <VStack spacing={3} py={5} borderBottomWidth={1} borderColor="brand.light">
             <Avatar
                 size="2xl"
                 name="Vladimir Nabokov"
-                cursor="default" // Change cursor to indicate no interaction
+                cursor="default"
                 src={userProfile ? userProfile : default_image}
             >
                 <AvatarBadge bg="brand.blue" boxSize="1em">
