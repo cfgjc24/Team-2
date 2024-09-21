@@ -7,12 +7,13 @@ import {
   RouterProvider
 } from "react-router-dom";
 
-import Admin from '../src/pages/Admin'
+import Student from '../src/pages/Student'
+// import Admin from '../src/pages/Admin'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Admin />,
+    element: <Student />,
   }
 ]);
 

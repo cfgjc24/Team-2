@@ -1,0 +1,27 @@
+html{
+  margin:auto;
+  text-align:center;
+  width:100vw;
+}
+
+.StudentClass{
+  /* background-color:white; */
+  width:100vw;
+
+  .grid{
+    display: grid;
+    padding: 1.5vw;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin: auto;
+    column-gap: 1.5vw;
+    row-gap: 5vh;
+    width: 90%;
+    max-width:100%;
+  }
+
+  #classStart{
+    font-style:italic;
+  }
+}
