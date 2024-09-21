@@ -15,7 +15,6 @@ import Login from "./pages/Login";
 import Student from "./pages/Student";
 import Tutor from "./pages/Tutor";
 import Tutor_Survey from "./pages/Tutor_Survey";
-import StudentFeedback from "./components/StudentFeedback";
 
 export default function App() {
   return (
@@ -29,7 +28,6 @@ export default function App() {
         <Route path="/student" element={<Student />} />
         <Route path="/tutor" element={<Tutor />} />
         <Route path="/tutor_survey" element={<Tutor_Survey />} />
-        <Route path="/studentfeedback" element={<StudentFeedbackTable />} />
       </Routes>
     </Router>
   );
