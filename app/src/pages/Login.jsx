@@ -10,6 +10,7 @@ import { redirect, useNavigate, Navigate } from "react-router-dom"; // Import us
 import "../index.css";
 import RoleDropDown from '../components/RoleDropdown'
 import SchoolDropDown from '../components/SchoolDropdown'
+import { collection, query, where, getDocs } from "firebase/firestore"; // Import necessary Firestore methods
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -53,20 +54,41 @@ export default function Login() {
 
         console.log("Sign up successful", user);
 
-        if (role === "Admin" && user) {
+        if (role === "Admin") {
           navigate("/admin");
         }
+        else if (role === "Student") {
+          navigate("/Student")
+        }
       } else {
+        // Sign in the user
         const userCredential = await signInWithEmailAndPassword(
           auth,
           email,
           password
         );
-        console.log("Sign in successful", userCredential.user);
+        const user = userCredential.user;
+        console.log("Sign in successful", user);
 
-        // If it's a sign in and role is admin, navigate to /admin
-        if (role === "Admin") {
-          navigate("/admin");
+        // Fetch the role from Firestore for the signed-in user based on email
+        const q = query(collection(firestore, "users"), where("email", "==", user.email));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+          querySnapshot.forEach((doc) => {
+            const userData = doc.data();
+            const userRole = userData.role;
+
+            // Check if the role is 'Admin' and navigate
+            if (userRole === "Admin") {
+              navigate("/Admin");
+            } else if (userRole === "Student") {
+              console.log(userRole);
+              navigate("/student");
+            }
+          });
+        } else {
+          console.error("No such document for the user!");
         }
       }
       console.log("Authentication successful");
@@ -78,7 +100,6 @@ export default function Login() {
 
   return (
     <div className="login">
-      <h1>Welcome! </h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <FormLabel className="label">Email: </FormLabel>
@@ -111,38 +132,13 @@ export default function Login() {
           </>
         )}
         {error && <p className="error">{error}</p>}
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          sx={{
-            marginTop: '20px',
-            '&:hover': {
-              backgroundColor: 'lightblue',
-              color: 'white',
-            }
-          }}
-        >
+        <Button type="submit" variant="contained" color="primary">
           {isSignUp ? "Sign Up" : "Login"}
         </Button>
-
       </form>
-      <Button
-        onClick={() => setIsSignUp(!isSignUp)}
-        variant="outlined"
-        size="small"
-        sx={{
-          maxWidth: '200px',
-          marginTop: '20px',
-          '&:hover': {
-            backgroundColor: 'lightblue',
-            color: 'white'
-          }
-        }}
-      >
+      <Button onClick={() => setIsSignUp(!isSignUp)}>
         {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
       </Button>
-
     </div>
   );
 }
