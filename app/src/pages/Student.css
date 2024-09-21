@@ -3,7 +3,12 @@ html {
   margin:0;
   padding:0;
   overflow-x:hidden;
-  width:vw;
+  width:100vw;
+  height:100vh;
+}
+
+body{
+  height:100%
 }
 
 .StudentClass {
@@ -15,7 +20,23 @@ html {
     font-size: 3vw;
   }
 
-  .grid {
+  #classStart {
+    font-style: italic;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #root .grid {
+    padding: 0.5vw;
+    grid-template-columns: repeat(1, 1fr); /* One item per row */
+    row-gap: 6vh; /* Space between rows */
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 800px){
+  #root .grid {
     display: grid;
     padding: 1.5vw;
     grid-template-rows: auto;
@@ -28,9 +49,5 @@ html {
     width: 90%;
     max-width: 100%;
     grid-column: span 2;
-  }
-
-  #classStart {
-    font-style: italic;
   }
 }
