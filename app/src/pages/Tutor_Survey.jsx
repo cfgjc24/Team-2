@@ -23,7 +23,7 @@ export default function StudentForm() {
       flexDirection="column"
       justifyContent="flex-end"
       alignItems="center"
-      bgcolor="#2A92Ef"
+      bgcolor="#bcecfc"
       sx={{ marginTop: "100px" }}
     >
       <Stack width="70vw" height="600px" spacing={10}>
