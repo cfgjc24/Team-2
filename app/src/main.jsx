@@ -1,28 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider
-} from "react-router-dom";
 
-import Admin from '../src/pages/Admin'
-import LandingPage from '../src/pages/Landing_Page'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App'; // App already contains BrowserRouter
+import './index.css';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <LandingPage />,
-  },
-  // {
-  //   path: "/login",
-  //   element: <Login />,
-  // }
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-]);
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-     <RouterProvider router={router} />
-  </StrictMode>,
-)
