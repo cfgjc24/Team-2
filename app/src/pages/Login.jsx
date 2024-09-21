@@ -11,6 +11,7 @@ import "../Login.css";
 import RoleDropDown from "../components/RoleDropdown";
 import SchoolDropDown from "../components/SchoolDropdown";
 import { collection, query, where, getDocs } from "firebase/firestore"; // Import necessary Firestore methods
+import logo from '../assets/firstgenerationinvestors_logo.jpeg';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -101,6 +102,20 @@ export default function Login() {
   };
 
   return (
+    <div className="landing-container">
+    <header className="landing-header">
+                <nav className="landing-nav">
+                    <div className="logo">
+                        <img src={logo} alt="First Generation Investors Logo" />
+                    </div>
+                    <ul className="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
     <div className="login">
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -141,6 +156,7 @@ export default function Login() {
       <Button onClick={() => setIsSignUp(!isSignUp)}>
         {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
       </Button>
+    </div>
     </div>
   );
 }
