@@ -8,7 +8,17 @@ export default function Login() {
 
   return (
     <div>
-      <h1> Login</h1>
+      <form>
+  <div>
+    <FormLabel>Username</FormLabel>
+    <TextField />
+  </div>
+  <div>
+    <FormLabel>Password</FormLabel>
+    <TextField />
+  </div>
+</form>
+<button type = "submit">Submit</button>
     </div>
   )
 }
