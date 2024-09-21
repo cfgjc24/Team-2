@@ -53,7 +53,7 @@ export default function Login() {
 
         console.log("Sign up successful", user);
 
-        if (role === "Admin") {
+        if (role === "Admin" && user) {
           navigate("/admin");
         }
       } else {
