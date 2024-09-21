@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 .module {
-  display: inline-block;
+  display: flex;
   background-color: #bcecfc;
   margin: auto;
   text-align: center;
@@ -11,6 +11,8 @@
   width: 80%;
   border-radius: 15px;
   font-family: 'Lato';
+  height:35vw;
+  align-items:center;
 
   #description {
     font-style: italic;
@@ -22,6 +24,10 @@
     border-radius: 15px;
     width:fit-content;
     margin:0 auto;
+  }
+
+  .data{
+    vertical-align: middle;
   }
   
   h1{
