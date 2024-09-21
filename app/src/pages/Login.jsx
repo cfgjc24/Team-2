@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import "../index.css";
+import RoleDropDown from '../components/RoleDropdown'
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -87,12 +88,9 @@ export default function Login() {
         {isSignUp && (
           <>
             <div className="form-group">
+
               <FormLabel className="label">Role: </FormLabel>
-              <TextField
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-                required
-              />
+              <RoleDropDown setRole={setRole} />
             </div>
             <div className="form-group">
               <FormLabel className="label">School: </FormLabel>
