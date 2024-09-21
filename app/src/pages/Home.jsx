@@ -1,4 +1,5 @@
 import React from 'react'
+import '../index.css'
 
 export default function Home() {
   return (
@@ -7,6 +8,14 @@ export default function Home() {
 
 
     <section id="header" class="wrapper">
+    <div class = "navbar">
+    <ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="about.asp">About</a></li>
+</ul>
+</div>
 
 
             <div id="logo">
