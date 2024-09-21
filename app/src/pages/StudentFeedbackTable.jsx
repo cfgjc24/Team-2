@@ -1,133 +1,90 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "@ag-grid-community/styles/ag-grid.css";
 import "@ag-grid-community/styles/ag-theme-quartz.css";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
-import { ModuleRegistry, createGrid } from "@ag-grid-community/core";
+import { ModuleRegistry, Grid } from "@ag-grid-community/core";
+import { collection, getDocs } from "firebase/firestore";
+import { firestore } from "./../Firebase";
 
-// Register AG-Grid modules
+// Registering the necessary ag-Grid module
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
-// Format date
-const dateFormatter = (params) => {
-  return new Date(params.value).toLocaleDateString("en-us", {
-    weekday: "long",
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-};
-
-// Custom cell renderer for company logo
-class CompanyLogoRenderer {
-  init(params) {
-    let companyLogo = document.createElement("img");
-    companyLogo.src = `https://www.ag-grid.com/example-assets/space-company-logos/${params.value.toLowerCase()}.png`;
-    companyLogo.setAttribute(
-      "style",
-      "display: block; width: 25px; height: auto; max-height: 50%; margin-right: 12px; filter: brightness(1.1)"
-    );
-
-    let companyName = document.createElement("p");
-    companyName.textContent = params.value;
-    companyName.setAttribute(
-      "style",
-      "text-overflow: ellipsis; overflow: hidden; white-space: nowrap;"
-    );
-
-    this.eGui = document.createElement("span");
-    this.eGui.setAttribute(
-      "style",
-      "display: flex; height: 100%; width: 100%; align-items: center"
-    );
-    this.eGui.appendChild(companyLogo);
-    this.eGui.appendChild(companyName);
-  }
-
-  getGui() {
-    return this.eGui;
-  }
-
-  refresh(params) {
-    return false;
-  }
-}
-
-// Custom cell renderer for mission result
-class MissionResultRenderer {
-  init(params) {
-    let icon = document.createElement("img");
-    icon.src = `https://www.ag-grid.com/example-assets/icons/${
-      params.value ? "tick-in-circle" : "cross-in-circle"
-    }.png`;
-    icon.setAttribute("style", "width: auto; height: auto;");
-
-    this.eGui = document.createElement("span");
-    this.eGui.setAttribute(
-      "style",
-      "display: flex; justify-content: center; height: 100%; align-items: center"
-    );
-    this.eGui.appendChild(icon);
-  }
-
-  getGui() {
-    return this.eGui;
-  }
-
-  refresh(params) {
-    return false;
-  }
-}
-
-// Grid Options
-const gridOptions = {
-  rowData: [],
-  columnDefs: [
-    { field: "mission", width: 150 },
-    { field: "company", width: 130, cellRenderer: CompanyLogoRenderer },
-    { field: "location", width: 225 },
-    { field: "date", valueFormatter: dateFormatter },
-    {
-      field: "price",
-      width: 130,
-      valueFormatter: (params) => {
-        return "£" + params.value.toLocaleString();
-      },
-    },
-    { field: "successful", width: 120, cellRenderer: MissionResultRenderer },
-    { field: "rocket" },
-  ],
-  defaultColDef: {
-    filter: true,
-    editable: true,
-  },
-  pagination: true,
-  paginationPageSize: 10,
-  onSelectionChanged: (event) => {
-    console.log("Row Selection Event!");
-  },
-  onCellValueChanged: (event) => {
-    console.log(`New Cell Value: ${event.value}`);
-  },
-};
+const columnDefs = [
+  { field: "user_id", headerName: "User ID", width: 150 },
+  { field: "lesson_num", headerName: "Lesson Number", width: 150 },
+  { field: "confidence_before", headerName: "Confidence Before", width: 150 },
+  { field: "confidence_after", headerName: "Confidence After", width: 150 },
+  { field: "satisfaction_after", headerName: "Satisfaction After", width: 150 },
+  { field: "time_taken", headerName: "Time Taken (mins)", width: 150 },
+  { field: "feedback", headerName: "Feedback", width: 300 },
+];
 
 export default function StudentFeedbackTable() {
+  const [rowData, setRowData] = useState([]);
+  const gridRef = useRef(null); // Store the grid instance reference
+
+  // Fetch data from Firebase
+  useEffect(() => {
+    const fetchData = async () => {
+      const querySnapshot = await getDocs(
+        collection(firestore, "student_data")
+      );
+      const data = querySnapshot.docs.map((doc) => doc.data());
+      setRowData(data.slice(0, 20)); // Set only the first 20 rows
+    };
+
+    fetchData();
+  }, []);
+
+  // Initialize the grid and update row data
   useEffect(() => {
     const gridDiv = document.querySelector("#myGrid");
 
-    // Initialize grid
-    const gridApi = createGrid(gridDiv, gridOptions);
+    if (!gridRef.current) {
+      // Initialize the grid only if it hasn't been initialized before
+      gridRef.current = new Grid(gridDiv, {
+        rowData,
+        columnDefs,
+        defaultColDef: {
+          filter: true,
+          editable: true,
+        },
+        pagination: true,
+        paginationPageSize: 10,
+      });
+    } else {
+      // If grid is already initialized, update the rowData
+      gridRef.current.gridOptions.api.setRowData(rowData);
+    }
 
-    // Fetch data and set rowData
-    fetch("https://www.ag-grid.com/example-assets/space-mission-data.json")
-      .then((response) => response.json())
-      .then((data) => gridApi.setGridOption("rowData", data));
-  }, []);
+    // Cleanup function to destroy the grid when the component unmounts
+    return () => {
+      if (gridRef.current) {
+        gridRef.current.gridOptions.api.destroy();
+        gridRef.current = null;
+      }
+    };
+  }, [rowData]);
+
+  // Export to CSV function
+  const handleExport = () => {
+    if (gridRef.current) {
+      gridRef.current.gridOptions.api.exportDataAsCsv({
+        fileName: "student_feedback.csv", // Specify the file name
+        skipHeader: false, // Include the column headers in the CSV
+        allColumns: true, // Export all columns, not just visible ones
+      });
+    }
+  };
 
   return (
-    <div
-      id="myGrid"
-      style={{ height: "500px", width: "100%" }}
-      className="ag-theme-quartz"
-    ></div>
+    <div>
+      <button onClick={handleExport}>Export to CSV</button>
+      <div
+        id="myGrid"
+        style={{ height: "500px", width: "100%" }}
+        className="ag-theme-quartz"
+      ></div>
+    </div>
   );
 }
