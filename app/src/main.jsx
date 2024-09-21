@@ -7,19 +7,15 @@ import {
   RouterProvider
 } from "react-router-dom";
 
-import Admin from '../src/pages/Admin'
-import LandingPage from '../src/pages/Landing_Page'
+import Student from '../src/pages/Student'
+import StudentForm from './components/Pre_student_forms';
+// import Admin from '../src/pages/Admin'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage />,
-  },
-  // {
-  //   path: "/login",
-  //   element: <Login />,
-  // }
-
+    element: <StudentForm />,
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(

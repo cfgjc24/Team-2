@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './module.css'
-import StudentForm from '../Student_forms'
+import StudentForm from '../Pre_student_forms'
 
 function Module({name, url}) {
   function sendModule(name){

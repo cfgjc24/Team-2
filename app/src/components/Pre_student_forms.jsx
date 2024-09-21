@@ -10,17 +10,19 @@ export default function StudentForm({module}) {
 
   const handleChange = (e) => {
     setConfidenceLevel(e.target.value);
+    console.log(e.target.value)
   };
   
  return (
-   <Box
-   height="85vh"
+  <Box
+   fullWidth
+   height="100vh"
    display="flex"
    flexDirection="column"
-   justifyContent="flex-end"
+   justifyContent="center"
    alignItems="center"
-   bgcolor={'#2A92Ef'}
-   sx={{ marginTop: "100px"}}
+   bgcolor={'#ADD8E6'}
+
    >
     <Stack
     width={'70vw'} 
@@ -58,7 +60,7 @@ export default function StudentForm({module}) {
       paddingX={5}
       >
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">From 1-10 how confident are you prior to this class</InputLabel>
+          <InputLabel id="demo-simple-select-label">Confidence Level 1-10</InputLabel>
             <Select
               abelId="demo-simple-select-label"
               id="demo-simple-select"
@@ -79,13 +81,12 @@ export default function StudentForm({module}) {
             </Select>
         </FormControl>
 
-      
-        
       </Box>
-      
+        <Box display={'flex'} justifyContent={'center'} width= '100%' >
+        <Button variant="contained">Submit Form</Button>
+        </Box>
     </Stack>
 
-    <Button variant="contained" >Contained</Button>
 
       
    </Box>
