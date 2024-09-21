@@ -7,13 +7,6 @@ import Login from "./pages/Login";
 import Student from "./pages/Student";
 import "./App.css";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const root = document.getElementById('root')
-root.render(<Home />)
-=======
-=======
->>>>>>> de215a58e07959278b9cd3a1c3a11c56a967a787
 export default function App() {
     return (
         <Router>
