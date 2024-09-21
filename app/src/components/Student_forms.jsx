@@ -3,7 +3,7 @@ import {Box, Stack, Select, MenuItem, FormControl, InputLabel, TextField, Button
 import { useState } from "react";
 
 
-export default function StudentForm() {
+export default function StudentForm({module}) {
 
   const [name, setName] = useState('');
   const [confidenceLevel, setConfidenceLevel] = useState(''); 

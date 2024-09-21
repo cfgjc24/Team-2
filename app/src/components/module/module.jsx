@@ -1,8 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 import './module.css'
+import StudentForm from '../Student_forms'
 
 function Module({name, url}) {
+  function sendModule(name){
+    StudentForm(name);
+  }
   return (
     <>
       <div className = "module">
@@ -12,7 +16,7 @@ function Module({name, url}) {
         </h5>
           <ul>
             <li><h3>Student Pre-Survey</h3></li>
-            <li><h3><a href = {url}>Lesson Slides</a></h3></li>
+            <li><h3><a href = {url} onClick = {sendModule(name)}>Lesson Slides</a></h3></li>
             <li><h3>Student Post-Survey</h3></li>
           </ul>
       </div>
