@@ -2,6 +2,7 @@ import React from 'react'
 import '../index.css'
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../assets/logo.png';
 
 
 export default function Home() {
@@ -14,18 +15,13 @@ export default function Home() {
     <div>
 
       <div id="page-wrapper">
-
-
-
+        <img src={Logo}></img>
         <header id="header" class="alt">
           <h1 id="logo"><a href="index.html">First Generation Investors </a></h1>
           <nav id="nav">
             <ul>
               <li class="current"><a href="http://127.0.0.1:5173/">Home</a></li>
               <li class="submenu">
-                <a href="#">Student</a>
-                <a href="http://127.0.0.1:5173/admin">Admin</a>
-                <a href="#">Tutor</a>
                 <ul>
                   <li><a href="left-sidebar.html">Left Sidebar</a></li>
                   <li><a href="right-sidebar.html">Right Sidebar</a></li>
@@ -50,21 +46,13 @@ export default function Home() {
           </nav>
         </header>
 
-
-
-
         <section id="banner">
 
-
-
-
           <div class="inner">
-
 
             <header>
               <h2>First Generation Investors</h2>
             </header>
-            <h3>Mission:</h3>
             <p>First Generation Investors (FGI) teaches high school students the power of investing and brings
               classroom lessons to life by providing students with real money to invest.</p>
             <footer>
@@ -76,11 +64,7 @@ export default function Home() {
 
           </div>
 
-
         </section>
-
-
-
 
         <article id="main">
 
@@ -94,8 +78,17 @@ export default function Home() {
           </header>
 
 
-
-          <section class="wrapper style2 container special-alt">
+          <header class="container why">
+            <span class="icon solid fa-chart-bar"></span>
+            <h2>Why are you here?</h2>
+            <p>With this application, we aim to collect and analyze student and tutor data to display impact for donors and investors, thereby increasing funding for FGI.</p>
+            <footer>
+              <ul class="buttons">
+                <li><a href="https://www.firstgenerationinvestors.com/" class="button">Find Out More</a></li>
+              </ul>
+            </footer>
+          </header>
+          {/* <section class="wrapper style2 container special-alt">
             <div class="row gtr-50">
               <div class="col-8 col-12-narrower">
 
@@ -127,11 +120,11 @@ export default function Home() {
 
               </div>
             </div>
-          </section>
+          </section> */}
 
 
 
-          <section class="wrapper style1 container special">
+          <section class="table">
             <div class="row">
               <div class="col-4 col-12-narrower">
 
@@ -182,9 +175,7 @@ export default function Home() {
 
 
             <header class="major">
-              <h2>Learn <strong>Finance</strong></h2>
-              <h2>Build <strong>Community</strong></h2>
-              <h2>Be <strong>Prepared</strong></h2>
+              <h2><strong>Enroll. Teach Invest.</strong></h2>
             </header>
 
 

@@ -1,3 +1,26 @@
+#logo{
+  float:left;
+  color:black;
+}
+
+#nav{
+  color:black;
+}
+
+.container{
+  padding:2vw;
+}
+
+.why{
+  padding:2vw;
+  background-color:#bcecfc ;
+}
+
+.table{
+  padding:1.5vw;
+  display:inline-block;
+}
+
 button {
   background-color: #2a92ef;
   color: black;
@@ -2327,9 +2350,9 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 button.primary,
 .button.primary {
-  background: #83d3c9;
-  border-color: #83d3c9;
-  color: #fff !important;
+  background: #bcecfc ;
+  border-color: #bcecfc ;
+  color: black !important;
 }
 
 input[type="button"].primary:hover,
@@ -2337,8 +2360,8 @@ input[type="submit"].primary:hover,
 input[type="reset"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-  background: #96dad1 !important;
-  border-color: #96dad1 !important;
+  background: #cef0fb  !important;
+  border-color: #cef0fb !important;
 }
 
 input[type="button"].fit,
@@ -2376,7 +2399,7 @@ button.small,
   background-position: bottom left, bottom right;
   background-repeat: no-repeat, no-repeat;
   background-size: 25em, 25em;
-  color: #fff;
+  color: black;
 }
 
 .wrapper.style2 input[type="button"]:hover,
@@ -2687,7 +2710,7 @@ button.small,
 
 #banner {
   background-attachment: scroll, scroll, scroll, fixed;
-  background-color: #645862;
+  background-color: #bcecfc ;
   background-image: url("images/light-bl.svg"), url("images/light-br.svg"),
     url("images/overlay.png"), url("../../images/banner.jpg");
   background-position: bottom left, bottom right, top left, top center;
@@ -2760,7 +2783,6 @@ button.small,
   background-position: top left, top right, bottom left, bottom right;
   background-repeat: no-repeat;
   background-size: 25em;
-  padding: 7em 0;
 }
 
 #main > :last-child {
@@ -2787,13 +2809,13 @@ body.index #main {
 
 #cta {
   background-attachment: scroll, scroll, scroll, fixed;
-  background-color: #645862;
+  background-color: #bcecfc ;
   background-image: url("images/light-tl.svg"), url("images/light-tr.svg"),
     url("images/overlay.png"), url("../../images/banner.jpg");
   background-position: top left, top right, top left, bottom center;
   background-repeat: no-repeat, no-repeat, repeat, no-repeat;
   background-size: 25em, 25em, auto, cover;
-  color: #fff;
+  color: black;
   padding: 5em;
   text-align: center;
 }
