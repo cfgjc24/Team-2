@@ -9,6 +9,7 @@ function Student() {
   const[ modules, setModules] = useState([])
  
   useEffect(() => {
+    // setModules([1, 2, 3, 4, 5, 6, 7, 8])
     setModules([
       {id: 1, link: "https://www.canva.com/design/DAEqdhQurq8/YZFuXmX70XK7WZWIpLaEEg/edit"},
       {id: 2, link: "https://www.canva.com/design/DAEpi95ye1M/HBcbIaVuniYDgMZO0ukLbQ/edit"},
