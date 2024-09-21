@@ -78,6 +78,7 @@ export default function Login() {
 
   return (
     <div className="login">
+      <h1>Welcome! </h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <FormLabel className="label">Email: </FormLabel>
@@ -110,13 +111,38 @@ export default function Login() {
           </>
         )}
         {error && <p className="error">{error}</p>}
-        <Button type="submit" variant="contained" color="primary">
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          sx={{
+            marginTop: '20px',
+            '&:hover': {
+              backgroundColor: 'lightblue',
+              color: 'white',
+            }
+          }}
+        >
           {isSignUp ? "Sign Up" : "Login"}
         </Button>
+
       </form>
-      <Button onClick={() => setIsSignUp(!isSignUp)}>
+      <Button
+        onClick={() => setIsSignUp(!isSignUp)}
+        variant="outlined"
+        size="small"
+        sx={{
+          maxWidth: '200px',
+          marginTop: '20px',
+          '&:hover': {
+            backgroundColor: 'lightblue',
+            color: 'white'
+          }
+        }}
+      >
         {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
       </Button>
+
     </div>
   );
 }
