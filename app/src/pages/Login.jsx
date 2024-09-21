@@ -10,11 +10,11 @@ export default function Login() {
     <div>
       <form>
   <div>
-    <FormLabel>Username</FormLabel>
+    <FormLabel>Username: </FormLabel>
     <TextField />
   </div>
   <div>
-    <FormLabel>Password</FormLabel>
+    <FormLabel>Password: </FormLabel>
     <TextField />
   </div>
 </form>
