@@ -10,16 +10,17 @@ import {
 import Admin from '../src/pages/Admin'
 import LandingPage from '../src/pages/Landing_Page'
 import Student from '../src/pages/Student'
+import StudentForm from './components/Pre_student_forms';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Student />,
+    element: <StudentForm />,
   },
-  // {
-  //   path: "/login",
-  //   element: <Login />,
-  // }
+  {
+    path: "/student",
+    element: <Student />,
+  }
 
 ]);
 
