@@ -13,7 +13,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Admin />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   }
+
 ]);
 
 createRoot(document.getElementById('root')).render(
