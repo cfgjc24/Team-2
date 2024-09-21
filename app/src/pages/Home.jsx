@@ -16,7 +16,9 @@ export default function Home() {
             <ul>
               <li class="current"><a href="http://127.0.0.1:5173/">Home</a></li>
               <li class="submenu">
+                <a href="#">Student</a>
                 <a href="http://127.0.0.1:5173/admin">Admin</a>
+                <a href="#">Tutor</a>
                 <ul>
                   <li><a href="left-sidebar.html">Left Sidebar</a></li>
                   <li><a href="right-sidebar.html">Right Sidebar</a></li>
