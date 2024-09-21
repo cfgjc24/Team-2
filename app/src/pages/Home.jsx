@@ -175,7 +175,7 @@ export default function Home() {
 
 
             <header class="major">
-              <h2><strong>Enroll. Teach Invest.</strong></h2>
+              <h2><strong>Enroll. Teach. Invest.</strong></h2>
             </header>
 
 
