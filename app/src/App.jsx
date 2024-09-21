@@ -16,6 +16,7 @@ import Student from "./pages/Student";
 import Tutor from "./pages/Tutor";
 import Tutor_Survey from "./pages/Tutor_Survey";
 import StudentFeedbackTable from "./pages/StudentFeedbackTable";
+import PreSurvey from "./pages/PreSurvey"
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/tutor" element={<Tutor />} />
         <Route path="/tutor_survey" element={<Tutor_Survey />} />
         <Route path="/studentfeedback" element={<StudentFeedbackTable />} />
+        <Route path="/presurvey" element={<PreSurvey />} />
       </Routes>
     </Router>
   );
