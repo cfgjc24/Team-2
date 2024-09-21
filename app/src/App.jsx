@@ -29,7 +29,7 @@ export default function App() {
         <Route path="/student" element={<Student />} />
         <Route path="/tutor" element={<Tutor />} />
         <Route path="/tutor_survey" element={<Tutor_Survey />} />
-        <Route path="/studentfeedback" element={<StudentFeedback />} />
+        <Route path="/studentfeedback" element={<StudentFeedbackTable />} />
       </Routes>
     </Router>
   );
