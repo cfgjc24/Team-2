@@ -1,20 +1,20 @@
 html {
   text-align: center;
-  margin:0;
-  padding:0;
-  overflow-x:hidden;
-  width:100vw;
-  height:100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
-body{
-  height:100%
+body {
+  height: 100%
 }
 
 .StudentClass {
   margin: 0 auto;
   width: 100%;
-  max-width:100vw;
+  max-width: 100vw;
 
   h1 {
     font-size: 3vw;
@@ -28,14 +28,16 @@ body{
 @media only screen and (max-width: 600px) {
   #root .grid {
     padding: 0.5vw;
-    grid-template-columns: repeat(1, 1fr); /* One item per row */
-    row-gap: 6vh; /* Space between rows */
+    grid-template-columns: repeat(1, 1fr);
+    /* One item per row */
+    row-gap: 6vh;
+    /* Space between rows */
     justify-content: center;
     margin: auto;
   }
 }
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 800px) {
   #root .grid {
     display: grid;
     padding: 1.5vw;

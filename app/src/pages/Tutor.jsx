@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Module from '../Components/TutorModule/Module.jsx';
+import Module from '../Components/TutorModule/Module';
 import '../Components/TutorModule/Tutor.css';
 import { Link } from 'react-router-dom';
 
