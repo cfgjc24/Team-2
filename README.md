@@ -21,3 +21,12 @@ We have built a web app that allows students to complete their necessary enrollm
     - Admin can view all students' pre and post session surveys.
     - Admin can view all students' assignments and progress.
     - Admin can view graphs of the data collected based on students success, and also being able to export these as CSV files to send to external donors to show the impact of the tutoring services.
+
+## Tools:
+
+Frontend: HTML, CSS, JavaScript, React, Vite, Material-UI
+Backend: Node.js, Firebase, AG Grit (CSV reports), Chart.js
+
+## Accessibility: 
+- The app is designed to be accessible to all users, including those with disabilities. It is a highly contrast theme with large text and buttons. It is also screen reader friendly while also prioritizing the use of FGI theme colors.
+
