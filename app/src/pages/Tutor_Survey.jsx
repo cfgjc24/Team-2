@@ -26,7 +26,8 @@ export default function StudentForm() {
       bgcolor="#bcecfc"
       sx={{ marginTop: "100px" }}
     >
-      <Stack width="70vw" height="600px" spacing={10}>
+      <Stack width="70vw" height="800px" spacing={10}>
+        <h1>We appreciate your feedback! </h1>
         <Box
           width="100%"
           minHeight="100px"
@@ -109,15 +110,11 @@ export default function StudentForm() {
         </Box>
 
 
-
-
+        <Box mt={2}>
+          <Button variant="contained">Submit</Button>
+        </Box>
 
       </Stack>
-
-
-
-
-      <Button variant="contained">Submit</Button>
     </Box>
   );
 }
