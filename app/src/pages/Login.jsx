@@ -6,10 +6,14 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+<<<<<<< HEAD
 import { redirect, useNavigate, Navigate } from "react-router-dom"; // Import useNavigate
 import "../index.css";
 import RoleDropDown from '../components/RoleDropdown'
 import SchoolDropDown from '../components/SchoolDropdown'
+=======
+import "../index.css";
+>>>>>>> 60c5104 (feat: firebase auth and storage setup)
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -19,12 +23,19 @@ export default function Login() {
   const [isSignUp, setIsSignUp] = useState(false);
   const [error, setError] = useState("");
 
+<<<<<<< HEAD
   const navigate = useNavigate(); // Initialize the navigate function
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
+=======
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+>>>>>>> 60c5104 (feat: firebase auth and storage setup)
     try {
       if (isSignUp) {
         const userCredential = await createUserWithEmailAndPassword(
@@ -52,10 +63,13 @@ export default function Login() {
         }
 
         console.log("Sign up successful", user);
+<<<<<<< HEAD
 
         if (role === "Admin" && user) {
           navigate("/admin");
         }
+=======
+>>>>>>> 60c5104 (feat: firebase auth and storage setup)
       } else {
         const userCredential = await signInWithEmailAndPassword(
           auth,
@@ -63,6 +77,7 @@ export default function Login() {
           password
         );
         console.log("Sign in successful", userCredential.user);
+<<<<<<< HEAD
 
         // If it's a sign in and role is admin, navigate to /admin
         if (role === "Admin") {
@@ -70,6 +85,11 @@ export default function Login() {
         }
       }
       console.log("Authentication successful");
+=======
+      }
+      console.log("Authentication successful");
+      // Redirect or update state as needed after successful authentication
+>>>>>>> 60c5104 (feat: firebase auth and storage setup)
     } catch (error) {
       console.error("Authentication error:", error);
       setError(`${error.code}: ${error.message}`);
@@ -102,15 +122,32 @@ export default function Login() {
           <>
             <div className="form-group">
               <FormLabel className="label">Role: </FormLabel>
+<<<<<<< HEAD
               <RoleDropDown setRole={setRole} />
             </div>
             <div className="form-group">
               <FormLabel className="label">School: </FormLabel>
               <SchoolDropDown setSchool={setSchool} />
+=======
+              <TextField
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <FormLabel className="label">School: </FormLabel>
+              <TextField
+                value={school}
+                onChange={(e) => setSchool(e.target.value)}
+                required
+              />
+>>>>>>> 60c5104 (feat: firebase auth and storage setup)
             </div>
           </>
         )}
         {error && <p className="error">{error}</p>}
+<<<<<<< HEAD
         <Button
           type="submit"
           variant="contained"
@@ -143,6 +180,15 @@ export default function Login() {
         {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
       </Button>
 
+=======
+        <Button type="submit" variant="contained" color="primary">
+          {isSignUp ? "Sign Up" : "Login"}
+        </Button>
+      </form>
+      <Button onClick={() => setIsSignUp(!isSignUp)}>
+        {isSignUp ? "Switch to Login" : "Switch to Sign Up"}
+      </Button>
+>>>>>>> 60c5104 (feat: firebase auth and storage setup)
     </div>
   );
 }
