@@ -1,0 +1,33 @@
+.module-card {
+    display: inline-block;
+    background-color: #2A92Ef;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    padding: 1.5rem;
+    box-shadow: 2px 1vh 1vh 1px rgb(0 0 0 / 20%);
+    max-width: 90%;
+}
+
+.module-card ul {
+    padding: 0;
+    list-style-type: none;
+    margin: auto;
+    text-align: center;
+}
+
+.module-card li {
+    padding: 0.5rem;
+}
+
+.module-card li:active {
+    color: white;
+}
+
+.module-card li:hover {
+    cursor: pointer;
+}
+
+.module-card a {
+    color: white;
+}
