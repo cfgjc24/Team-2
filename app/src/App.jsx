@@ -5,4 +5,4 @@ import './App.css'
 import { ReactDOM } from 'react'
 
 const root = document.getElementById('root')
-root.render(<Home/>)
+root.render(<Admin/>)

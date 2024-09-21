@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 
 import Admin from '../src/pages/Admin'
+import Home from '../src/pages/Home'
 
 const router = createBrowserRouter([
   {

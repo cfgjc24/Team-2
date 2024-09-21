@@ -1,26 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
-function Admin() {
-  const [count, setCount] = useState(0)
+import {PreConfidenceChart} from '../charts/PreConfidenceChart'
+// import PostConfidenceChart from '../charts/Post-ConfidenceChart'
 
+function Admin() {
   return (
-    <>
-      <div>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 2)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <h1>Pre-Confidence Survey</h1>
+      <PreConfidenceChart/>
+    </div>
   )
 }
 
-export default Admin
+export default Admin;
