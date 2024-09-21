@@ -92,7 +92,7 @@ export default function Login() {
               console.log(userRole);
               navigate("/student");
             } else if (userRole === "Tutor") {
-              navigate("/student");
+              navigate("/tutor");
             }
           });
         } else {

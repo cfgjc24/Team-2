@@ -25,25 +25,18 @@ function Tutor() {
   return (
     <>
       <div className="TutorClass">
-        <Navbar/>
+        <Navbar />
         <h1>Tutor Portal</h1>
         <h3 id="className">Select A Class To Start</h3>
         <div className="grid">
           {modules.map((module) => (
-            <div className="stuff" key={module.id}>
+            <div className="module" key={module.id}>
               <Module name={module.id} url={module.link} />
             </div>
           ))}
         </div>
-        
-        <div className="bottom-button">
-          <Link to="/Tutor_Survey">
-            <div className="form-navigation">Go to Tutor Survey</div> {/* Use a div instead of button */}
-          </Link>
-        </div>
+      </div>
 
-        </div>
-      
     </>
   );
 }
