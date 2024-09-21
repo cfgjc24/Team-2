@@ -90,12 +90,12 @@ bridge the gap.</p>
 
 
                 <header>
-                  <h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
+                  <h2>Why are you here?</h2>
                 </header>
-                <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
+                <p>With this application, we aim to collect and analyze student and tutor data to display impact for donors and investors, thereby increasing funding for FGI.</p>
                 <footer>
                   <ul class="buttons">
-                    <li><a href="#" class="button">Find Out More</a></li>
+                    <li><a href="https://www.firstgenerationinvestors.com/" class="button">Find Out More</a></li>
                   </ul>
                 </footer>
 

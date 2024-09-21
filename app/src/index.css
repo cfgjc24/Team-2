@@ -76,6 +76,20 @@ body {
 	line-height: 1;
 }
 
+#header {
+  padding-top: 20px; /* Adjust to increase space between top and content */
+}
+
+#page-wrapper {
+  margin-top: 100px; /* Shifts content below the header */
+}
+
+#banner {
+  margin-top: 50px; /* Add margin to prevent the banner from overlapping with header */
+  padding: 50px 0; /* Adjust padding inside the banner */
+}
+
+
 ol, ul {
 	list-style: none;
 }
