@@ -171,7 +171,9 @@ bridge the gap.</p>
 
 
             <header class="major">
-              <h2>Our <strong>donors</strong></h2>
+              <h2>Learn <strong>Finance</strong></h2>
+              <h2>Build <strong>Community</strong></h2>
+              <h2>Be <strong>Prepared</strong></h2>
             </header>
 
 
@@ -179,26 +181,14 @@ bridge the gap.</p>
               <div class="col-6 col-12-narrower">
 
 
-                <section>
-                  <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-                  <header>
-                    <h3>A Really Fast Train</h3>
-                  </header>
-                  <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-                </section>
+                
 
 
               </div>
               <div class="col-6 col-12-narrower">
 
 
-                <section>
-                  <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-                  <header>
-                    <h3>An Airport Terminal</h3>
-                  </header>
-                  <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-                </section>
+                
 
 
               </div>
@@ -207,37 +197,19 @@ bridge the gap.</p>
               <div class="col-6 col-12-narrower">
 
 
-                <section>
-                  <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-                  <header>
-                    <h3>Hyperspace Travel</h3>
-                  </header>
-                  <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-                </section>
 
 
               </div>
               <div class="col-6 col-12-narrower">
 
 
-                <section>
-                  <a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-                  <header>
-                    <h3>And Another Train</h3>
-                  </header>
-                  <p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-                </section>
 
 
               </div>
             </div>
 
 
-            <footer class="major">
-              <ul class="buttons">
-                <li><a href="#" class="button">See More</a></li>
-              </ul>
-            </footer>
+           
 
 
           </section>
