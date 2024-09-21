@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Module from '../Components/TutorModule/Module.jsx';
 import '../Components/TutorModule/Tutor.css';
+import { Link } from 'react-router-dom';
 
 
 function Tutor() {
@@ -32,7 +33,15 @@ function Tutor() {
             </div>
           ))}
         </div>
-      </div>
+        
+        <div className="bottom-button">
+          <Link to="/Tutor_Survey">
+            <div className="form-navigation">Go to Tutor Survey</div> {/* Use a div instead of button */}
+          </Link>
+        </div>
+
+        </div>
+      
     </>
   );
 }
